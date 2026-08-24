@@ -84,7 +84,7 @@ export default function Footer() {
 
           {/* Contact info */}
           <div className="font-sans text-sm text-bone/50">
-            <p className="eyebrow mb-3">Contact</p>
+            <p className="eyebrow mb-3">Address</p>
             {site.addressLines.map((line, i) => (
               <p key={i} className="leading-relaxed">{line}</p>
             ))}
