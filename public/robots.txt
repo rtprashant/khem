@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.khemtattoo.example/sitemap.xml
+Sitemap: https://khemtattoo.com/sitemap.xml

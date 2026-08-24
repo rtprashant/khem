@@ -3,9 +3,17 @@ import Academy from "@/components/Academy";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-    title: "Khem Academy | Learn Tattooing in Gurugram",
+    title: "Tattoo Training in Gurugram | Khem Academy",
     description:
         "Artist-led tattoo education in Gurugram. Build fundamentals, advanced technique, studio discipline, and a professional pathway at Khem Academy.",
+    alternates: { canonical: "/academy" },
+    openGraph: {
+        title: "Tattoo Training in Gurugram | Khem Academy",
+        description:
+            "Artist-led tattoo training in Gurugram covering fundamentals, advanced technique and professional studio practice.",
+        url: "/academy",
+        images: ["/academy-hero.webp"],
+    },
 };
 
 export default function AcademyPage() {

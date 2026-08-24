@@ -19,16 +19,20 @@ import "./globals.css";
 import { site } from "@/data/site";
 
 const fontVars = "font-vars";
-const siteUrl = "https://www.khemtattoo.in"; // Update to real domain when deployed
+// Keep every canonical signal on the same public origin. Set NEXT_PUBLIC_SITE_URL
+// when a custom domain is connected; the current Vercel URL is the safe fallback.
+const siteUrl = (
+  "https://khemtattoo.com" || "https://khem-s5sr.vercel.app"
+).replace(/\/$/, "");
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `Khem Tattoo & Piercing — Custom Tattoo Studio in Gurugram`,
+    default: "Tattoo Studio in Gurgaon | Khem Tattoo & Piercing",
     template: `%s — Khem Tattoo & Piercing`,
   },
   description:
-    "Khem Tattoo & Piercing is a premium tattoo and piercing studio in Gurugram, Haryana. 10+ years experience, 5.0★ on Google (373+ reviews). Custom tattoos, realism, colour tattoos, fine line & professional body piercing at MGF Metropolis Mall.",
+    "Custom tattoos, hyper-realism, fine-line tattoos and professional body piercing in Gurgaon. Visit Khem Tattoo at MGF Metropolis Mall, Sector 28, Gurugram.",
   keywords: [
     "tattoo artist in Gurugram",
     "tattoo studio in Gurugram",
@@ -44,21 +48,34 @@ export const metadata = {
     "MGF Metropolis Mall tattoo",
     "fine line tattoo Gurugram",
     "black and grey tattoo Gurugram",
+    "hyper realism tattoo artist Gurgaon",
+    "tattoo studio Sector 28 Gurgaon",
+    "piercing studio Sector 28 Gurgaon",
+    "custom tattoo near MGF Metropolis Mall",
   ],
   openGraph: {
-    title: "Khem Tattoo & Piercing — Custom Tattoo Studio, Gurugram",
+    title: "Tattoo Studio in Gurgaon | Khem Tattoo & Piercing",
     description:
-      "Premium tattoo & piercing studio in Gurugram. 10+ years experience. 5.0★ Google rating (373+ reviews). Custom realism, colour tattoos & professional body piercing.",
+      "Custom tattoos, hyper-realism, fine-line tattoos and professional body piercing at MGF Metropolis Mall, Sector 28, Gurugram.",
     url: siteUrl,
     siteName: site.name,
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "/hero-tattoo.webp",
+        width: 1200,
+        height: 630,
+        alt: "Black and grey portrait tattoo created by Khem Tattoo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Khem Tattoo & Piercing — Custom Tattoo Studio, Gurugram",
+    title: "Tattoo Studio in Gurgaon | Khem Tattoo & Piercing",
     description:
-      "Premium tattoo & piercing studio in Gurugram. 10+ years experience. 5.0★ Google rating.",
+      "Custom tattoos and professional body piercing at MGF Metropolis Mall, Sector 28, Gurugram.",
+    images: ["/hero-tattoo.webp"],
   },
   alternates: {
     canonical: siteUrl,
@@ -82,14 +99,9 @@ export default function RootLayout({ children }) {
     description: site.description,
     telephone: "+916294458070",
     url: siteUrl,
-    image: `${siteUrl}/tattoo/IMG_2090.webp`,
+    logo: `${siteUrl}/KHEM%20Tattoo%20%26%20Piercing%20Emblem.webp`,
+    image: `${siteUrl}/hero-tattoo.webp`,
     priceRange: "₹₹",
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5.0",
-      reviewCount: "373",
-      bestRating: "5",
-    },
     address: {
       "@type": "PostalAddress",
       streetAddress:
@@ -101,6 +113,15 @@ export default function RootLayout({ children }) {
     },
     openingHours: ["Mo-Su 11:00-22:00"],
     sameAs: [site.instagram],
+    hasMap: site.mapsUrl,
+    areaServed: ["Gurugram", "Gurgaon", "Delhi NCR"],
+    knowsAbout: [
+      "Custom tattoos",
+      "Hyper-realism tattoos",
+      "Fine-line tattoos",
+      "Colour tattoos",
+      "Body piercing",
+    ],
     geo: {
       "@type": "GeoCoordinates",
       latitude: "28.4665",

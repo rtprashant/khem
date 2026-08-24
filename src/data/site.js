@@ -28,7 +28,7 @@ export const site = {
   whatsappMessage:
     "Hi Khem Tattoo, I would like to enquire about a tattoo/piercing session.",
 
-  email: "prashantrajput827327@gmail.com",
+  email: "thapasabnam75@gmail.com",
 
   instagram: "https://www.instagram.com/khem_tattoo/",
   instagramHandle: "@khem_tattoo",
