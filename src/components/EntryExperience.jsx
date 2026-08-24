@@ -10,14 +10,14 @@ const ease = [0.16, 1, 0.3, 1];
 
 export default function EntryExperience() {
   const whatsappHref = `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(site.whatsappMessage)}`;
-  const stats = [["google", "5.0", "Star reviews"], ["▶", "100K+", "YouTube subscribers"], ["◇", "100%", "Safe & hygienic"], ["☆", "10+", "Years of experience"]];
+  const stats = [["google", "5.0", "Star reviews"], ["youtube", "100K+", "YouTube subscribers"], ["◇", "100%", "Safe & hygienic"], ["☆", "10+", "Years of experience"]];
 
   return (
     <section id="home" className="texture-dark relative overflow-hidden px-5 pb-5 pt-28 text-white sm:px-8 sm:pb-8 lg:pt-32">
       <div className="absolute inset-0 opacity-30" style={{ background: "radial-gradient(circle at 72% 35%, #6a210b 0, transparent 27%), radial-gradient(circle at 20% 20%, #242424 0, transparent 34%)" }} />
       <div className="container-khem relative z-10 px-0">
         <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_.95fr]">
-          <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: .8, ease }}>
+          <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: .8, ease }} className="order-2 lg:order-1">
             <p className="mb-4 font-mono text-[10px] font-bold uppercase tracking-[.28em] text-[#ba9255]">Gurugram&apos;s premium body art studio</p>
             <h1 className="font-display text-[clamp(3.25rem,6.7vw,6.8rem)] leading-[.88] tracking-[.01em]">Custom tattoos &amp;<br />professional piercing<br /><span className="text-[#ba9255]">in Gurugram</span></h1>
             <p className="mt-6 max-w-xl text-sm font-medium leading-7 text-white/70 sm:text-base">Custom tattoos, cover-up work and professional piercing, created with precision in a clean, welcoming studio.</p>
@@ -31,7 +31,7 @@ export default function EntryExperience() {
               <a href={site.instagram} target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-[#ba9255]"><span className="rounded border border-[#ba9255] p-2"><Instagram size={15} /></span>{site.instagramHandle}</a>
             </div>
           </motion.div>
-          <motion.div initial={{ opacity: 0, scale: .96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: .9, ease, delay: .1 }} className="relative mx-auto w-full max-w-[570px]">
+          <motion.div initial={{ opacity: 0, scale: .96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: .9, ease, delay: .1 }} className="relative order-1 mx-auto w-full max-w-[570px] lg:order-2">
             <div className="relative aspect-[4/5] overflow-hidden rounded-xl border border-[#ba9255] bg-black">
               <Image src="/hero-tattoo.webp" alt="Black and grey portrait tattoo by Khem" fill priority sizes="(max-width: 1024px) 100vw, 48vw" className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
@@ -43,7 +43,7 @@ export default function EntryExperience() {
           </motion.div>
         </div>
         <div className="mt-8 grid overflow-hidden rounded-xl border border-white/25 bg-black/60 sm:grid-cols-2 lg:grid-cols-4">
-          {stats.map(([icon,value,label], i) => <div key={label} className={`flex items-center gap-4 px-6 py-5 ${i ? "border-t border-white/20 sm:border-l sm:border-t-0" : ""}`}><span className="flex h-9 w-9 shrink-0 items-center justify-center text-3xl font-bold leading-none text-[#ba9255]">{icon === "google" ? "G" : icon}</span><div><strong className="block font-display text-3xl leading-none">{value}</strong><span className="text-[9px] font-bold uppercase tracking-wider text-white/65">{label}</span></div></div>)}
+          {stats.map(([icon,value,label], i) => <div key={label} className={`flex items-center gap-4 px-6 py-5 ${i ? "border-t border-white/20 sm:border-l sm:border-t-0" : ""}`}><span className="flex h-9 w-9 shrink-0 items-center justify-center text-3xl font-bold leading-none text-[#ba9255]">{icon === "google" ? "G" : icon === "youtube" ? <span className="relative flex h-6 w-9 items-center justify-center rounded-md bg-[#ff0033] shadow-sm"><span className="ml-0.5 h-0 w-0 border-y-[5px] border-l-[8px] border-y-transparent border-l-white" /></span> : icon}</span><div><strong className="block font-display text-3xl leading-none">{value}</strong><span className="text-[9px] font-bold uppercase tracking-wider text-white/65">{label}</span></div></div>)}
         </div>
       </div>
     </section>
