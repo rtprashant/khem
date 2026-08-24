@@ -155,7 +155,7 @@ export default function Portfolio() {
   }, [lightboxIndex, close, next, prev]);
 
   return (
-    <section id="portfolio" className="bg-ivory pt-24 pb-20 sm:pt-32 sm:pb-28">
+    <section id="portfolio" className="bg-ivory pt-24 pb-10 sm:pt-32 sm:pb-14">
       <div className="container-khem">
         {/* Section header */}
         <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between sm:gap-6">
@@ -242,7 +242,7 @@ export default function Portfolio() {
 
         {/* Link to inquire */}
         <motion.div
-          className="mt-14 flex justify-center"
+          className="mt-10 flex justify-center"
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

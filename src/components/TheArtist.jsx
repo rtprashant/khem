@@ -21,7 +21,7 @@ export default function TheArtist() {
   )}`;
 
   return (
-    <section id="artist" className="bg-ivory py-24 sm:py-36 overflow-hidden">
+    <section id="artist" className="bg-ivory py-14 sm:py-20 overflow-hidden">
       <div className="container-khem">
         {/* Eyebrow + heading */}
         <motion.p
@@ -34,7 +34,7 @@ export default function TheArtist() {
           The Artist
         </motion.p>
         <motion.h2
-          className="font-display text-5xl leading-[0.92] tracking-tightest2 text-charcoal sm:text-6xl lg:text-7xl mb-12 sm:mb-16"
+          className="font-display text-5xl leading-[0.92] tracking-tightest2 text-charcoal sm:text-6xl lg:text-7xl mb-10 sm:mb-12"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
