@@ -31,7 +31,7 @@ export default function EntryExperience() {
               <a href={site.instagram} target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-[#ba9255]"><span className="rounded border border-[#ba9255] p-2"><Instagram size={15} /></span>{site.instagramHandle}</a>
             </div>
           </motion.div>
-          <motion.div initial={{ opacity: 0, scale: .96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: .9, ease, delay: .1 }} className="relative order-1 mx-auto w-full max-w-[570px] lg:order-2">
+          <motion.div initial={{ opacity: 0, scale: .96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: .9, ease, delay: .1 }} className="relative order-1 mx-auto w-full max-w-[250px] sm:max-w-[350px] lg:order-2 lg:max-w-[420px] xl:max-w-[450px]">
             <div className="relative aspect-[4/5] overflow-hidden rounded-xl border border-[#ba9255] bg-black">
               <Image src="/hero-tattoo.webp" alt="Black and grey portrait tattoo by Khem" fill priority sizes="(max-width: 1024px) 100vw, 48vw" className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
