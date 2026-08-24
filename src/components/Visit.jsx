@@ -56,7 +56,7 @@ export default function Visit() {
           >
             {/* Address */}
             <div className="flex gap-4">
-              <MapPin size={18} className="mt-0.5 shrink-0 text-burgundy-soft" aria-hidden="true" />
+              <MapPin size={18} className="mt-0.5 shrink-0 text-gold" aria-hidden="true" />
               <div className="font-sans text-sm text-bone/70 leading-relaxed">
                 <p className="text-bone font-medium mb-1">Khem Tattoo &amp; Piercing</p>
                 {site.addressLines.map((line, i) => (
@@ -67,7 +67,7 @@ export default function Visit() {
 
             {/* Hours */}
             <div className="flex gap-4">
-              <Clock size={18} className="mt-0.5 shrink-0 text-burgundy-soft" aria-hidden="true" />
+              <Clock size={18} className="mt-0.5 shrink-0 text-gold" aria-hidden="true" />
               <div className="font-sans text-sm text-bone/70">
                 {site.hours.map((h) => (
                   <div key={h.days} className="flex justify-between gap-8 py-1">
@@ -80,7 +80,7 @@ export default function Visit() {
 
             {/* Instagram */}
             <div className="flex gap-4 items-center">
-              <Instagram size={18} className="shrink-0 text-burgundy-soft" aria-hidden="true" />
+              <Instagram size={18} className="shrink-0 text-gold" aria-hidden="true" />
               <a
                 href={site.instagram}
                 target="_blank"

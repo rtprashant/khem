@@ -250,7 +250,7 @@ export default function Portfolio() {
         >
           <Link
             href="#contact"
-            className="rounded-full border border-charcoal/20 px-8 py-3.5 font-sans text-[12px] uppercase tracking-wide2 text-charcoal transition-all duration-300 hover:bg-charcoal hover:text-bone"
+            className="whitespace-nowrap rounded-full border border-charcoal/20 px-8 py-3.5 font-sans text-[11px] uppercase tracking-wide2 text-charcoal transition-all duration-300 hover:bg-charcoal hover:text-bone sm:text-[12px]"
           >
             Start Your Design Conversation
           </Link>

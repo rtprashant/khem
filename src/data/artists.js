@@ -21,7 +21,7 @@ export const artists = [
   {
     id: "snazzy",
     name: "Snazzy",
-    role: "Tattoo Artist",
+    role: "Tattoo Artist & Professional Piercer",
     image: "/SNAZZY.JPG",
     bio: "Snazzy brings a thoughtful, detail-first approach to every piece. She works closely with clients to turn personal ideas into clean, expressive tattoos, combining a calm studio presence with the patience and precision that great work demands.",
     specialties: [
