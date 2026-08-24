@@ -182,7 +182,12 @@ export default function Contact() {
           outline: none;
         }
         .form-inp::placeholder { color: rgba(255,255,255,0.42); }
-        .form-inp:focus { border-color: #ba9255; }
+        .form-inp:focus,
+        .form-inp:focus-visible {
+          border-color: #ba9255;
+          box-shadow: 0 0 0 1px #ba9255;
+          outline: none !important;
+        }
         .form-inp option { color: #111; }
       `}</style>
     </section>

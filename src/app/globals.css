@@ -94,11 +94,14 @@ select:focus-visible,
 }
 
 .texture-dark {
-  background-color: #11100e;
-  background-image: linear-gradient(rgba(7, 7, 6, 0.22), rgba(7, 7, 6, 0.22)), url("/dark-texture.webp");
-  background-position: center top;
-  background-repeat: repeat-y;
-  background-size: 100% auto;
+  background: linear-gradient(
+    135deg,
+    #111111 0%,
+    #242321 35%,
+    #302e2b 52%,
+    #211f1d 72%,
+    #0e0e0e 100%
+  );
 }
 
 .hero-ink-field {

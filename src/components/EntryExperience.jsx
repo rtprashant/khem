@@ -36,14 +36,14 @@ export default function EntryExperience() {
               <Image src="/hero-tattoo.webp" alt="Black and grey portrait tattoo by Khem" fill priority sizes="(max-width: 1024px) 100vw, 48vw" className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
             </div>
-            <div className="absolute -right-2 top-[30%] grid gap-2 sm:-right-10">
+            <div className="absolute -right-2 top-[30%] grid origin-right scale-[.68] gap-2 sm:-right-10 sm:scale-100">
               <div className="rounded-xl border border-white/50 bg-black/90 p-4 shadow-2xl backdrop-blur sm:p-5"><div className="flex items-center gap-3"><GoogleIcon /><strong className="font-display text-3xl">5.0</strong></div><p className="mt-2 text-[9px] font-bold uppercase tracking-wider">Star reviews</p><div className="mt-2 flex text-[#ba9255]">{[0,1,2,3,4].map(i => <Star key={i} size={15} fill="currentColor" />)}</div></div>
               <div className="rounded-xl border border-white/50 bg-black/90 p-4 shadow-2xl backdrop-blur sm:p-5"><div className="flex items-center gap-3"><ShieldCheck className="text-[#ba9255]" /><strong className="font-display text-3xl">100%</strong></div><p className="mt-2 text-[9px] font-bold uppercase tracking-wider">Hygiene &amp; safety</p></div>
             </div>
           </motion.div>
         </div>
         <div className="mt-8 grid overflow-hidden rounded-xl border border-white/25 bg-black/60 sm:grid-cols-2 lg:grid-cols-4">
-          {stats.map(([icon,value,label], i) => <div key={label} className={`flex items-center gap-4 px-6 py-5 ${i ? "border-t border-white/20 sm:border-l sm:border-t-0" : ""}`}><span className="flex h-9 w-9 shrink-0 items-center justify-center text-3xl font-bold leading-none text-[#ba9255]">{icon === "google" ? "G" : icon === "youtube" ? <span className="relative flex h-6 w-9 items-center justify-center rounded-md bg-[#ff0033] shadow-sm"><span className="ml-0.5 h-0 w-0 border-y-[5px] border-l-[8px] border-y-transparent border-l-white" /></span> : icon}</span><div><strong className="block font-display text-3xl leading-none">{value}</strong><span className="text-[9px] font-bold uppercase tracking-wider text-white/65">{label}</span></div></div>)}
+          {stats.map(([icon,value,label], i) => <div key={label} className={`flex items-center gap-4 px-6 py-5 ${i ? "border-t border-white/20 sm:border-l sm:border-t-0" : ""}`}><span className="flex h-9 w-9 shrink-0 items-center justify-center text-3xl font-bold leading-none text-[#ba9255]">{icon === "google" ? "G" : icon === "youtube" ? "▶" : icon}</span><div><strong className="block font-display text-3xl leading-none">{value}</strong><span className="text-[9px] font-bold uppercase tracking-wider text-white/65">{label}</span></div></div>)}
         </div>
       </div>
     </section>
