@@ -7,6 +7,7 @@ export const artists = [
     bio: "Khem is an experienced tattooist and professional piercer with over 8 years of experience in the body art industry. Known for precision, realism, colour tattoos, creativity, and a deep understanding of client needs, Khem delivers exceptional custom tattoos and safe, hygienic piercings in a welcoming studio environment.",
     specialties: [
       "Realism",
+      "Piercing",
       "Colour Tattoos",
       "Custom Tattoos",
       "Minimalist Tattoos",
@@ -25,6 +26,7 @@ export const artists = [
     bio: "Snazzy brings a thoughtful, detail-first approach to every piece. She works closely with clients to turn personal ideas into clean, expressive tattoos, combining a calm studio presence with the patience and precision that great work demands.",
     specialties: [
       "Custom Tattoos",
+      "Piercing",
       "Fine Line",
       "Detail Work",
       "Minimalist Tattoos",

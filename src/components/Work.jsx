@@ -72,17 +72,7 @@ export default function Work() {
                 className="object-cover object-center"
               />
 
-              {/* Gradient overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/20 to-transparent opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
-
-              <div className="absolute inset-0 flex flex-col justify-end p-4 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
-                <span className="font-display text-sm font-medium text-bone line-clamp-1">
-                  {item.title}
-                </span>
-                <span className="font-mono text-[10px] text-bone/60 uppercase tracking-wider">
-                  View Full Artwork
-                </span>
-              </div>
+              <div className="absolute inset-0 bg-ink/25 opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
             </button>
           ))}
         </div>
@@ -120,9 +110,9 @@ export default function Work() {
               initial={{ opacity: 0, scale: 0.97 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.2 }}
-              className="relative max-h-[90vh] w-full max-w-2xl overflow-hidden rounded-lg bg-charcoal"
+              className="relative w-full max-w-2xl px-2 pb-6 pt-14 sm:px-0 sm:pb-8"
             >
-              <div className="relative aspect-[3/4] max-h-[74vh] w-full bg-ink">
+              <div className="relative aspect-[3/4] w-full max-h-[min(78vh,calc(100svh-7rem))] bg-ink">
                 <Image
                   src={active_item.image}
                   alt={active_item.title}
@@ -130,15 +120,10 @@ export default function Work() {
                   unoptimized
                   className="object-contain"
                 />
-              </div>
-              <div className="p-4 flex items-center justify-between font-sans text-bone border-t border-bone/10 bg-charcoal">
-                <div>
-                  <h3 className="font-display text-lg text-bone">{active_item.title}</h3>
-                </div>
                 <Link
                   href="#contact"
                   onClick={close}
-                  className="rounded-full bg-bone px-5 py-2 text-xs uppercase tracking-wider text-charcoal transition-all hover:bg-white font-medium"
+                  className="absolute bottom-4 right-4 z-10 rounded-full bg-bone px-6 py-3 text-xs font-bold uppercase tracking-wider text-charcoal shadow-[0_8px_24px_rgba(0,0,0,0.45)] transition-colors hover:bg-white"
                 >
                   Inquire
                 </Link>

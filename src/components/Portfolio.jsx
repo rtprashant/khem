@@ -34,12 +34,7 @@ function PortfolioImage({ src, alt, priority = false, onOpen, index }) {
         className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
       />
       {/* Hover overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-      <div className="absolute inset-0 flex items-end p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-        <p className="font-mono text-[10px] uppercase tracking-wider text-bone/80">
-          View Full
-        </p>
-      </div>
+      <div className="absolute inset-0 bg-ink/25 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
     </motion.button>
   );
 }
@@ -79,10 +74,10 @@ function Lightbox({ images, index, onClose, onPrev, onNext }) {
           initial={{ opacity: 0, scale: 0.97 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.2 }}
-          className="relative max-h-[90vh] w-full max-w-2xl overflow-hidden rounded-sm"
+          className="relative w-full max-w-2xl px-2 pb-6 pt-14 sm:px-0 sm:pb-8"
           onClick={(e) => e.stopPropagation()}
         >
-          <div className="relative aspect-[3/4] max-h-[82vh] w-full bg-charcoal">
+          <div className="relative aspect-[3/4] w-full max-h-[min(78vh,calc(100svh-7rem))] bg-charcoal">
             <Image
               src={item.src}
               alt={item.alt}
@@ -90,13 +85,10 @@ function Lightbox({ images, index, onClose, onPrev, onNext }) {
               sizes="(max-width: 768px) 100vw, 700px"
               className="object-contain"
             />
-          </div>
-          <div className="flex items-center justify-between bg-charcoal px-5 py-4 border-t border-bone/10">
-            <p className="font-display text-base text-bone capitalize">{item.alt}</p>
             <Link
               href="#contact"
               onClick={onClose}
-              className="rounded-full bg-bone px-5 py-2 text-[11px] uppercase tracking-wider text-charcoal hover:bg-white font-medium"
+              className="absolute bottom-4 right-4 z-10 rounded-full bg-bone px-6 py-3 text-[11px] font-bold uppercase tracking-wider text-charcoal shadow-[0_8px_24px_rgba(0,0,0,0.45)] transition-colors hover:bg-white"
             >
               Inquire
             </Link>

@@ -92,7 +92,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop links */}
-        <ul className="hidden items-center gap-8 font-sans text-[12px] uppercase tracking-wide2 lg:flex">
+        <ul className="hidden items-center gap-8 font-sans text-[12px] font-bold uppercase tracking-wide2 lg:flex">
           {NAV_ITEMS.map((item) => (
             <li key={`${item.label}-${item.href}`}>
               <Link
@@ -107,12 +107,14 @@ export default function Navbar() {
         </ul>
 
         {/* Book Now CTA */}
-        <Link
-          href={hrefFor("#visit")}
-          className={`hidden rounded-full border px-5 py-2 font-sans text-[11px] uppercase tracking-wide2 transition-all duration-300 lg:inline-block font-medium ${ctaStyles}`}
-        >
-          Book Now
-        </Link>
+        <div className="hidden items-center gap-3 lg:flex">
+          <Link
+            href={hrefFor("#visit")}
+            className={`rounded-full border px-5 py-2 font-sans text-[11px] font-bold uppercase tracking-wide2 transition-all duration-300 ${ctaStyles}`}
+          >
+            Book Now
+          </Link>
+        </div>
 
         {/* Mobile hamburger */}
         <button

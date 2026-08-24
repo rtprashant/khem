@@ -40,13 +40,13 @@ export default function Reviews() {
               viewport={{ once: true }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             >
-              <h2 className="font-display text-4xl leading-tight tracking-tightest2 sm:text-6xl">
+              <h2 className="font-display text-4xl font-bold leading-tight tracking-tightest2 sm:text-6xl">
                 Said better by them.
               </h2>
               {/* Rating aggregate */}
               <div className="mt-4 flex items-center gap-3">
                 <StarRow rating={5} />
-                <span className="font-display text-xl tracking-tightest2">{site.googleRating}</span>
+                <span className="font-display text-xl font-bold tracking-tightest2 text-gold">{site.googleRating}</span>
                 <span className="font-mono text-xs uppercase tracking-wide2 text-bone/50">
                   {site.googleReviewCount} Google Reviews
                 </span>
@@ -86,7 +86,7 @@ export default function Reviews() {
           <div
             key={`${review.name}-${i}`}
             data-review-card
-            className="flex h-[300px] w-[88vw] shrink-0 select-none flex-col justify-between gap-5 overflow-hidden rounded-sm border border-bone/10 bg-bone/[0.04] p-6 sm:h-[285px] sm:w-[420px] sm:p-8"
+            className="flex h-[300px] w-[88vw] shrink-0 select-none flex-col justify-between gap-5 overflow-hidden border border-bone/15 bg-bone/[0.06] p-6 sm:h-[285px] sm:w-[420px] sm:p-8"
           >
             <div>
               <StarRow rating={review.rating} />

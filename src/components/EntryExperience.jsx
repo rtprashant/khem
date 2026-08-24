@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Instagram, MessageCircle, Phone, ArrowDown } from "lucide-react";
+import { Instagram, ArrowDown } from "lucide-react";
 import { site } from "@/data/site";
 import Image from "next/image";
 
@@ -85,7 +85,7 @@ export default function EntryExperience() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 1, ease, delay: 0.05 }}
           >
-            <h1 className="hero-title font-display text-[22vw] leading-[0.82] tracking-tightest2 text-bone sm:text-[16vw] lg:text-[14rem]">
+            <h1 className="hero-title hero-khem-title font-display text-[22vw] text-bone sm:text-[16vw] md:text-[13vw] lg:text-[9.5rem] xl:text-[11rem]">
               KHEM
             </h1>
           </motion.div>
@@ -94,7 +94,7 @@ export default function EntryExperience() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.18, ease }}
-            className="mt-3 font-sans text-[3.5vw] tracking-wide2 uppercase text-bone/70 sm:text-sm font-light"
+            className="mt-3 font-subheading text-[3.5vw] font-semibold tracking-[0.12em] uppercase text-bone/85 sm:text-base"
           >
             Tattoo &amp; Piercing Studio
           </motion.p>
@@ -103,7 +103,7 @@ export default function EntryExperience() {
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.28, ease }}
-            className="mt-2 font-mono text-[2.5vw] tracking-wide text-bone/40 sm:text-xs"
+            className="mt-2 font-mono text-[2.5vw] font-semibold tracking-wide text-bone/55 sm:text-xs"
           >
             Where your vision meets expert hands.
           </motion.p>
@@ -113,19 +113,19 @@ export default function EntryExperience() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.38, ease }}
-            className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center gap-4"
+            className="mt-8 sm:mt-10 flex w-full max-w-md flex-col items-stretch gap-3 sm:max-w-none sm:flex-row sm:items-center sm:justify-center sm:gap-4"
           >
             <a
               href={whatsappHref}
               target="_blank"
               rel="noreferrer"
-              className="group relative overflow-hidden rounded-full bg-bone px-7 py-3.5 font-sans text-[12px] uppercase tracking-wide2 text-ink transition-all duration-300 hover:bg-white hover:scale-[1.02] font-medium"
+              className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 font-sans text-[13px] font-bold uppercase tracking-wide2 text-ink shadow-[0_8px_32px_rgba(0,0,0,0.45)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-bone hover:shadow-[0_12px_40px_rgba(0,0,0,0.55)] sm:min-w-[200px]"
             >
-              <span className="relative z-10">Book a Session</span>
+              Book a Session
             </a>
             <a
               href="#portfolio"
-              className="rounded-full border border-bone/40 px-7 py-3.5 font-sans text-[12px] uppercase tracking-wide2 text-bone transition-all duration-300 hover:border-bone hover:bg-bone/10"
+              className="inline-flex items-center justify-center rounded-full border-2 border-white/90 bg-white/10 px-8 py-4 font-sans text-[13px] font-bold uppercase tracking-wide2 text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-white hover:bg-white/20 sm:min-w-[200px]"
             >
               Explore Work
             </a>
@@ -139,17 +139,9 @@ export default function EntryExperience() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.45, ease }}
-            aria-label="Direct Studio Contact"
-            className="flex items-center gap-6 font-mono text-xs uppercase tracking-wide2 text-bone/60"
+            aria-label="Studio social"
+            className="flex items-center gap-6 font-mono text-xs font-semibold uppercase tracking-wide2 text-bone/70"
           >
-            <a
-              href={site.phoneHref}
-              className="inline-flex items-center gap-2 transition-colors hover:text-bone"
-              aria-label="Call Khem Tattoo"
-            >
-              <Phone size={13} strokeWidth={1.5} />
-              <span>Call</span>
-            </a>
             <a
               href={site.instagram}
               target="_blank"
@@ -159,16 +151,6 @@ export default function EntryExperience() {
             >
               <Instagram size={13} strokeWidth={1.5} />
               <span>Instagram</span>
-            </a>
-            <a
-              href={whatsappHref}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 transition-colors hover:text-bone"
-              aria-label="WhatsApp Khem Tattoo"
-            >
-              <MessageCircle size={13} strokeWidth={1.5} />
-              <span>WhatsApp</span>
             </a>
           </motion.nav>
 

@@ -113,18 +113,7 @@ export default function Piercing() {
                 className="object-cover object-center"
               />
 
-              {/* Gradient vignette on hover */}
-              <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
-
-              {/* Info Overlay on hover */}
-              <div className="absolute inset-0 flex flex-col justify-end p-4 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
-                <h4 className="font-display text-sm font-medium text-bone">
-                  {item.title}
-                </h4>
-                <p className="line-clamp-1 mt-0.5 text-[11px] font-sans text-bone/60">
-                  {item.jewellery}
-                </p>
-              </div>
+              <div className="absolute inset-0 bg-ink/25 opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
             </button>
           ))}
         </div>
@@ -179,9 +168,9 @@ export default function Piercing() {
               initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.2 }}
-              className="relative max-h-[90vh] w-full max-w-2xl overflow-hidden rounded-lg bg-charcoal"
+              className="relative w-full max-w-2xl px-2 pb-6 pt-14 sm:px-0 sm:pb-8"
             >
-              <div className="relative aspect-[3/4] max-h-[70vh] w-full bg-ink">
+              <div className="relative aspect-[3/4] w-full max-h-[min(78vh,calc(100svh-7rem))] bg-ink">
                 <Image
                   src={activeItem.image}
                   alt={activeItem.title}
@@ -189,26 +178,13 @@ export default function Piercing() {
                   unoptimized
                   className="object-contain"
                 />
-              </div>
-              <div className="p-4 bg-charcoal border-t border-bone/10">
-                <div className="flex items-center justify-between">
-                  <h3 className="font-display text-lg text-bone">{activeItem.title}</h3>
-                  <span className="text-[11px] font-mono text-bone/50">
-                    {activeItem.jewellery}
-                  </span>
-                </div>
-                <p className="mt-1.5 text-xs font-sans leading-relaxed text-bone/70">
-                  {activeItem.description}
-                </p>
-                <div className="mt-3 flex items-center justify-end border-t border-bone/10 pt-2.5">
-                  <Link
-                    href="#contact"
-                    onClick={closeLightbox}
-                    className="text-xs uppercase tracking-wider text-bone underline underline-offset-4 hover:text-burgundy-soft font-medium"
-                  >
-                    Inquire About This Piercing
-                  </Link>
-                </div>
+                <Link
+                  href="#contact"
+                  onClick={closeLightbox}
+                  className="absolute bottom-4 right-4 z-10 rounded-full bg-bone px-6 py-3 text-xs font-bold uppercase tracking-wider text-charcoal shadow-[0_8px_24px_rgba(0,0,0,0.45)] transition-colors hover:bg-white"
+                >
+                  Inquire
+                </Link>
               </div>
             </motion.div>
 

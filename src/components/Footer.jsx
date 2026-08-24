@@ -88,20 +88,6 @@ export default function Footer() {
             {site.addressLines.map((line, i) => (
               <p key={i} className="leading-relaxed">{line}</p>
             ))}
-            <a
-              href={site.phoneHref}
-              className="mt-3 block hover:text-bone transition-colors"
-            >
-              {site.phone}
-            </a>
-            <a
-              href={site.instagram}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-1 block hover:text-bone transition-colors"
-            >
-              {site.instagramHandle}
-            </a>
           </div>
         </div>
 
