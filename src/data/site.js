@@ -39,7 +39,7 @@ export const site = {
     "https://maps.google.com/?q=Khem+Tattoo+Piercing+MGF+Metropolis+Mall+Gurugram",
 
   hours: [
-    { days: "Monday — Sunday", time: "Open · Closes 10 PM" },
+    { days: "Monday — Sunday", time: "Open 12 PM · Closes 10 PM" },
   ],
 
   googleRating: "5.0",

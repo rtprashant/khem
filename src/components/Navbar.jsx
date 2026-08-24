@@ -34,7 +34,7 @@ export default function Navbar() {
         const rect = section.getBoundingClientRect();
         return rect.top <= 48 && rect.bottom > 48;
       });
-      const darkSections = new Set(["home", "portfolio", "artist", "contact", "academy-home", "academy-values"]);
+      const darkSections = new Set(["home", "portfolio", "artist", "contact", "academy-home", "academy-contact"]);
       setIsDark(darkSections.has(current?.id));
     };
     onScroll();

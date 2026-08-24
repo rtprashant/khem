@@ -97,33 +97,16 @@ export default function Academy() {
         </div>
       </section>
 
-      <section id="academy-values" className="texture-dark py-24 text-white sm:py-32">
-        <div className="container-khem grid gap-12 lg:grid-cols-[0.8fr,1.2fr] lg:gap-24">
-          <div>
-            <p className="mb-4 text-[11px] font-bold uppercase tracking-wide3 text-[#ba9255]">02 / Beyond the machine</p>
-            <h2 className="font-display text-5xl leading-tight tracking-tightest2 sm:text-6xl">The profession is bigger than the tool.</h2>
-          </div>
-          <div className="grid gap-8 sm:grid-cols-2">
-            {["Design, digital art, and visual presence", "Communication and the studio mindset", "Client conversations, service, and trust", "Hygiene, safety, and repeatable systems"].map((item, index) => (
-              <div key={item} className="border-t border-white/20 pt-4">
-                <p className="font-mono text-[10px] tracking-wide3 text-[#ba9255]">0{index + 1}</p>
-                <h3 className="mt-3 font-display text-2xl leading-tight tracking-tightest2">{item}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="academy-contact" className="bg-white py-24 sm:py-32">
+      <section id="academy-contact" className="texture-dark py-24 text-white sm:py-32">
         <div className="container-khem grid gap-10 lg:grid-cols-[1fr,0.8fr] lg:items-end">
           <div>
-            <p className="eyebrow mb-4">03 / Start the conversation</p>
+            <p className="mb-4 text-[11px] font-bold uppercase tracking-wide3 text-[#ba9255]">03 / Start the conversation</p>
             <h2 className="max-w-2xl font-display text-5xl leading-tight tracking-tightest2 sm:text-7xl">Serious about the craft?</h2>
-            <p className="mt-6 max-w-lg font-sans text-sm leading-relaxed text-charcoal/65 sm:text-base">Tell us where you are in your journey, share a few samples of your work, and we will guide you toward the right course.</p>
+            <p className="mt-6 max-w-lg font-sans text-sm leading-relaxed text-white/65 sm:text-base">Tell us where you are in your journey, share a few samples of your work, and we will guide you toward the right course.</p>
           </div>
           <div className="lg:justify-self-end">
             <a href={whatsappHref} target="_blank" rel="noreferrer" className="inline-flex max-w-full whitespace-nowrap rounded-full bg-[#ba9255] px-5 py-4 font-sans text-[10px] font-bold uppercase tracking-wider text-white transition-all hover:-translate-y-0.5 hover:bg-[#c9a46c] sm:px-7 sm:text-[12px] sm:tracking-wide2">Enquire on WhatsApp</a>
-            <p className="mt-4 font-mono text-[10px] uppercase tracking-wide2 text-charcoal/45">Applications reviewed personally · {site.location}</p>
+            <p className="mt-4 font-mono text-[10px] uppercase tracking-wide2 text-white/45">Applications reviewed personally · {site.location}</p>
           </div>
         </div>
       </section>
