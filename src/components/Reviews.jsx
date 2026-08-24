@@ -82,7 +82,7 @@ export default function Reviews() {
         aria-label="Customer reviews"
         data-native-scroll
       >
-        {[...reviews, ...reviews].map((review, i) => (
+        {[...reviews].map((review, i) => (
           <div
             key={`${review.name}-${i}`}
             data-review-card
