@@ -7,7 +7,7 @@ export const site = {
   shortName: "Khem",
   tagline: "Where your vision meets expert hands.",
   description:
-    "Khem Tattoo & Piercing is a premium custom tattoo and piercing studio in Gurugram, led by Khem — 8+ years of expertise in realism, colour tattoos, fine line, and professional body piercing. 5.0★ on Google.",
+    "Khem Tattoo & Piercing is a premium custom tattoo and piercing studio in Gurugram, led by Khem — 10+ years of expertise in realism, colour tattoos, fine line, and professional body piercing. 5.0★ on Google.",
 
   location: "Gurugram, Haryana",
   locationShort: "Gurugram",
@@ -48,7 +48,7 @@ export const site = {
     "https://www.google.com/search?q=Khem+Tattoo+%26+Piercing+Gurugram&tbm=lcl",
 
   stats: [
-    { value: "8+", label: "Years Experience" },
+    { value: "10+", label: "Years Experience" },
     { value: "5.0★", label: "Google Rating" },
     { value: "373+", label: "Google Reviews" },
     { value: "1 Lakh+", label: "Youtube Subscribers" },

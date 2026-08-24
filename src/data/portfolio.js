@@ -28,6 +28,7 @@ export const tattooImages = [
   { id: "t17", src: "/tattoo/IMG_8989.webp",  alt: "Fine needle silhouette", size: "square" },
   { id: "t18", src: "/tattoo/IMG_8990.webp",  alt: "Sculptural realism", size: "wide" },
   { id: "t19", src: "/tattoo/KHM01034.webp",  alt: "Signature Khem studio piece", size: "tall" },
+  { id: "t20", src: "/hero-tattoo.webp", alt: "Black and grey portrait tattoo by Khem", size: "tall" },
 ];
 
 export const piercingImages = [

@@ -53,7 +53,7 @@ export default function Contact() {
   )}`;
 
   return (
-    <section id="contact" className="bg-ivory py-24 sm:py-32">
+    <section id="contact" className="texture-dark py-24 text-white sm:py-32">
       <div className="container-khem grid gap-14 lg:grid-cols-2 lg:gap-24">
         {/* Left — Intro */}
         <motion.div
@@ -63,10 +63,10 @@ export default function Contact() {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         >
           <p className="eyebrow mb-4">Book a Consultation</p>
-          <h2 className="max-w-md font-display text-4xl leading-tight tracking-tightest2 text-charcoal sm:text-6xl">
+          <h2 className="max-w-md font-display text-4xl leading-tight tracking-tightest2 text-white sm:text-6xl">
             Tell us your idea.
           </h2>
-          <p className="mt-5 max-w-sm font-sans text-sm leading-relaxed text-charcoal/60 sm:text-base">
+          <p className="mt-5 max-w-sm font-sans text-sm leading-relaxed text-white/65 sm:text-base">
             Share a few details about your vision — we'll follow up to discuss
             placement, size, and timing before anything is confirmed.
           </p>
@@ -75,7 +75,7 @@ export default function Contact() {
           <div className="mt-8 flex flex-col gap-3">
             <a
               href={site.phoneHref}
-              className="inline-flex w-fit items-center gap-2.5 rounded-full border border-charcoal/20 px-6 py-3 font-sans text-[12px] uppercase tracking-wide2 text-charcoal transition-all duration-300 hover:bg-charcoal hover:text-bone"
+              className="inline-flex max-w-full items-center gap-2.5 whitespace-nowrap rounded-full border border-white/30 px-4 py-3 font-sans text-[10px] uppercase tracking-wider text-white transition-all duration-300 hover:border-[#ba9255] hover:text-[#ba9255] sm:w-fit sm:px-6 sm:text-[12px] sm:tracking-wide2"
             >
               <Phone size={14} />
               {site.phone}
@@ -84,7 +84,7 @@ export default function Contact() {
               href={whatsappHref}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex w-fit items-center gap-2.5 rounded-full border border-charcoal/20 px-6 py-3 font-sans text-[12px] uppercase tracking-wide2 text-charcoal transition-all duration-300 hover:bg-charcoal hover:text-bone"
+              className="inline-flex max-w-full items-center gap-2.5 whitespace-nowrap rounded-full border border-white/30 px-4 py-3 font-sans text-[10px] uppercase tracking-wider text-white transition-all duration-300 hover:border-[#ba9255] hover:text-[#ba9255] sm:w-fit sm:px-6 sm:text-[12px] sm:tracking-wide2"
             >
               <MessageCircle size={14} />
               Chat on WhatsApp
@@ -155,7 +155,7 @@ export default function Contact() {
           <button
             type="submit"
             disabled={status === "sending"}
-            className="w-full rounded-full bg-charcoal px-7 py-4 font-sans text-[12px] uppercase tracking-wide2 text-ivory transition-all duration-300 hover:-translate-y-0.5 disabled:opacity-60 cursor-pointer"
+            className="w-full cursor-pointer whitespace-nowrap rounded-full bg-[#ba9255] px-5 py-4 font-sans text-[11px] font-bold uppercase tracking-wider text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#c9a46c] disabled:opacity-60 sm:px-7 sm:text-[12px] sm:tracking-wide2"
           >
             {status === "sending" ? "Sending…" : "Send Enquiry"}
           </button>
@@ -172,17 +172,18 @@ export default function Contact() {
       <style jsx global>{`
         .form-inp {
           width: 100%;
-          background: transparent;
-          border: 1px solid rgba(34, 30, 27, 0.18);
+          background: rgba(0, 0, 0, 0.28);
+          border: 1px solid rgba(255, 255, 255, 0.25);
           border-radius: 2px;
           padding: 0.75rem 1rem;
           font-size: 0.875rem;
-          color: #221e1b;
+          color: #ffffff;
           transition: border-color 0.2s;
           outline: none;
         }
-        .form-inp::placeholder { color: rgba(34,30,27,0.35); }
-        .form-inp:focus { border-color: #6e2430; }
+        .form-inp::placeholder { color: rgba(255,255,255,0.42); }
+        .form-inp:focus { border-color: #ba9255; }
+        .form-inp option { color: #111; }
       `}</style>
     </section>
   );
@@ -191,8 +192,8 @@ export default function Contact() {
 function Field({ label, children, required }) {
   return (
     <label className="block">
-      <span className="mb-2 block font-sans text-xs uppercase tracking-wide text-charcoal/50">
-        {label} {required && <span className="text-burgundy">*</span>}
+      <span className="mb-2 block font-sans text-xs uppercase tracking-wide text-white/60">
+        {label} {required && <span className="text-[#ba9255]">*</span>}
       </span>
       {children}
     </label>

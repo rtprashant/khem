@@ -21,7 +21,7 @@ export default function TheArtist() {
   )}`;
 
   return (
-    <section id="artist" className="bg-ivory py-14 sm:py-20 overflow-hidden">
+    <section id="artist" className="texture-dark overflow-hidden py-14 text-white sm:py-20">
       <div className="container-khem">
         {/* Eyebrow + heading */}
         <motion.p
@@ -34,7 +34,7 @@ export default function TheArtist() {
           The Artist
         </motion.p>
         <motion.h2
-          className="font-display text-5xl leading-[0.92] tracking-tightest2 text-charcoal sm:text-6xl lg:text-7xl mb-10 sm:mb-12"
+          className="font-display text-5xl leading-[0.92] tracking-tightest2 text-white sm:text-6xl lg:text-7xl mb-10 sm:mb-12"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -47,7 +47,7 @@ export default function TheArtist() {
 
         <div className="grid gap-16 lg:grid-cols-2 lg:gap-12">
           {artists.map((teamArtist, index) => (
-            <div key={teamArtist.id} className="border-t border-charcoal/10 pt-8 sm:pt-10">
+            <div key={teamArtist.id} className="border-t border-white/15 pt-8 sm:pt-10">
               <div className="grid gap-7">
                 <div className="relative aspect-[4/5] overflow-hidden rounded-sm shadow-xl">
                   <Image
@@ -67,18 +67,18 @@ export default function TheArtist() {
                 </div>
                 <div>
 
-                  <h3 className="font-display text-4xl leading-tight tracking-tightest2 text-charcoal sm:text-5xl">
+                  <h3 className="font-display text-4xl leading-tight tracking-tightest2 text-white sm:text-5xl">
                     Meet {teamArtist.name}.
                   </h3>
-                  <p className="mt-2 font-mono text-[11px] uppercase tracking-wide2 text-burgundy">
+                  <p className="mt-2 font-mono text-[11px] uppercase tracking-wide2 text-[#ba9255]">
                     {teamArtist.role}
                   </p>
-                  <p className="mt-5 max-w-xl font-sans text-sm leading-relaxed text-charcoal/75 sm:text-base">
+                  <p className="mt-5 max-w-xl font-sans text-sm leading-relaxed text-white/70 sm:text-base">
                     {teamArtist.bio}
                   </p>
                   <div className="mt-6 flex flex-wrap gap-2">
                     {teamArtist.specialties.map((specialty) => (
-                      <span key={specialty} className="rounded-full border border-charcoal/20 px-3.5 py-1.5 font-sans text-[11px] uppercase tracking-wide text-charcoal/70">
+                      <span key={specialty} className="rounded-full border border-white/25 px-3.5 py-1.5 font-sans text-[11px] uppercase tracking-wide text-white/70">
                         {specialty}
                       </span>
                     ))}

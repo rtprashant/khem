@@ -29,13 +29,18 @@ export default function Navbar() {
       const y = window.scrollY;
       setScrolled(y > 30);
       // Hero is 100svh tall — transition nav colors once past ~70% of viewport height
-      const heroEnd = window.innerHeight * 0.8;
-      setIsDark(y < heroEnd);
+      const sections = Array.from(document.querySelectorAll("section, footer"));
+      const current = sections.find((section) => {
+        const rect = section.getBoundingClientRect();
+        return rect.top <= 48 && rect.bottom > 48;
+      });
+      const darkSections = new Set(["home", "portfolio", "artist", "contact", "academy-home", "academy-values"]);
+      setIsDark(darkSections.has(current?.id));
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [pathname]);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -67,7 +72,7 @@ export default function Navbar() {
   const bgStyles = scrolled
     ? isDark
       ? "bg-ink/90 backdrop-blur-md border-b border-bone/10 shadow-md py-3"
-      : "bg-ivory/95 backdrop-blur-md border-b border-charcoal/10 shadow-sm py-3"
+      : "bg-white/95 backdrop-blur-md border-b border-charcoal/10 shadow-sm py-3"
     : "bg-transparent py-5";
 
   return (
@@ -82,7 +87,7 @@ export default function Navbar() {
           aria-label="Khem Tattoo & Piercing — home"
         >
           <Image
-            src="/KHEM%20Tattoo%20%26%20Piercing%20Emblem.png"
+            src="/KHEM%20Tattoo%20%26%20Piercing%20Emblem.webp"
             alt="Khem Tattoo & Piercing"
             fill
             priority

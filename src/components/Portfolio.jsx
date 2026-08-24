@@ -14,7 +14,7 @@ function PortfolioImage({ src, alt, priority = false, onOpen, index }) {
       type="button"
       onClick={onOpen}
       aria-label={`View ${alt}`}
-      className="group relative w-full h-full overflow-hidden bg-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-burgundy cursor-pointer rounded-sm"
+      className="group relative h-full w-full cursor-pointer overflow-hidden rounded-md border border-[#ba9255]/80 bg-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#ba9255]"
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
@@ -155,34 +155,34 @@ export default function Portfolio() {
   }, [lightboxIndex, close, next, prev]);
 
   return (
-    <section id="portfolio" className="bg-ivory pt-24 pb-10 sm:pt-32 sm:pb-14">
+    <section id="portfolio" className="texture-dark py-20 text-white sm:py-24">
       <div className="container-khem">
         {/* Section header */}
         <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between sm:gap-6">
           <div>
             <motion.p
-              className="eyebrow mb-3"
+              className="mb-3 text-[10px] font-bold uppercase tracking-wider text-[#ba9255]"
               initial={{ opacity: 0, x: -12 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              Portfolio
+              The work
             </motion.p>
             <motion.h2
-              className="font-display text-4xl leading-tight tracking-tightest2 text-charcoal sm:text-6xl"
+              className="font-display text-5xl leading-tight sm:text-7xl"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             >
-              The Work.
+              Portfolio
             </motion.h2>
           </div>
 
           {/* TATTOO | PIERCING Toggle */}
           <motion.div
-            className="flex w-fit flex-none items-center gap-0 overflow-hidden rounded-full border border-charcoal/15 bg-charcoal/5 p-0"
+            className="flex w-full flex-none items-center overflow-hidden rounded-full border border-white/35 bg-black sm:w-auto"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -196,9 +196,9 @@ export default function Portfolio() {
                   setActiveTab(tab);
                   setLightboxIndex(null);
                 }}
-                className={`relative px-5 py-2 font-sans text-[12px] uppercase tracking-wide2 transition-all duration-300 cursor-pointer sm:px-6 ${activeTab === tab
-                  ? "bg-charcoal text-bone shadow-sm"
-                  : "text-charcoal/60 hover:text-charcoal"
+                className={`relative flex-1 cursor-pointer px-10 py-3 font-sans text-[12px] uppercase tracking-wide2 transition-all duration-300 sm:flex-none ${activeTab === tab
+                  ? "rounded-full border border-[#ba9255] bg-[#ba9255] font-bold text-white"
+                  : "text-white/75 hover:text-white"
                   }`}
                 aria-pressed={activeTab === tab}
               >
@@ -216,17 +216,12 @@ export default function Portfolio() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            className="columns-2 gap-3 sm:columns-3 sm:gap-4 lg:columns-4 space-y-3 sm:space-y-4"
+            className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5"
           >
             {images.map((img, idx) => (
               <div
                 key={img.id}
-                className={`break-inside-avoid ${img.size === "tall"
-                  ? "aspect-[3/4]"
-                  : img.size === "wide"
-                    ? "aspect-[4/3]"
-                    : "aspect-square"
-                  }`}
+                className="aspect-[3/4]"
               >
                 <PortfolioImage
                   src={img.src}
@@ -250,9 +245,9 @@ export default function Portfolio() {
         >
           <Link
             href="#contact"
-            className="whitespace-nowrap rounded-full border border-charcoal/20 px-8 py-3.5 font-sans text-[11px] uppercase tracking-wide2 text-charcoal transition-all duration-300 hover:bg-charcoal hover:text-bone sm:text-[12px]"
+            className="max-w-full whitespace-nowrap rounded-full border border-[#ba9255] px-4 py-3.5 text-center font-sans text-[9px] uppercase tracking-[0.08em] text-[#ba9255] transition-all duration-300 hover:bg-[#ba9255] hover:text-white sm:px-8 sm:text-[12px] sm:tracking-wide2"
           >
-            Start Your Design Conversation
+            Start Your Design Conversation →
           </Link>
         </motion.div>
       </div>

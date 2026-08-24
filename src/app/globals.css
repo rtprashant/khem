@@ -93,6 +93,14 @@ select:focus-visible,
   @apply mx-auto w-full max-w-[1400px] px-6 sm:px-8 lg:px-12;
 }
 
+.texture-dark {
+  background-color: #11100e;
+  background-image: linear-gradient(rgba(7, 7, 6, 0.22), rgba(7, 7, 6, 0.22)), url("/dark-texture.webp");
+  background-position: center top;
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+}
+
 .hero-ink-field {
   background:
     radial-gradient(circle at 50% 44%, #29201d 0%, #100e0c 42%, #050505 78%);

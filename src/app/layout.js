@@ -28,7 +28,7 @@ export const metadata = {
     template: `%s — Khem Tattoo & Piercing`,
   },
   description:
-    "Khem Tattoo & Piercing is a premium tattoo and piercing studio in Gurugram, Haryana. 8+ years experience, 5.0★ on Google (373+ reviews). Custom tattoos, realism, colour tattoos, fine line & professional body piercing at MGF Metropolis Mall.",
+    "Khem Tattoo & Piercing is a premium tattoo and piercing studio in Gurugram, Haryana. 10+ years experience, 5.0★ on Google (373+ reviews). Custom tattoos, realism, colour tattoos, fine line & professional body piercing at MGF Metropolis Mall.",
   keywords: [
     "tattoo artist in Gurugram",
     "tattoo studio in Gurugram",
@@ -48,7 +48,7 @@ export const metadata = {
   openGraph: {
     title: "Khem Tattoo & Piercing — Custom Tattoo Studio, Gurugram",
     description:
-      "Premium tattoo & piercing studio in Gurugram. 8+ years experience. 5.0★ Google rating (373+ reviews). Custom realism, colour tattoos & professional body piercing.",
+      "Premium tattoo & piercing studio in Gurugram. 10+ years experience. 5.0★ Google rating (373+ reviews). Custom realism, colour tattoos & professional body piercing.",
     url: siteUrl,
     siteName: site.name,
     locale: "en_IN",
@@ -58,13 +58,13 @@ export const metadata = {
     card: "summary_large_image",
     title: "Khem Tattoo & Piercing — Custom Tattoo Studio, Gurugram",
     description:
-      "Premium tattoo & piercing studio in Gurugram. 8+ years experience. 5.0★ Google rating.",
+      "Premium tattoo & piercing studio in Gurugram. 10+ years experience. 5.0★ Google rating.",
   },
   alternates: {
     canonical: siteUrl,
   },
   icons: {
-    icon: "/KHEM%20Tattoo%20%26%20Piercing%20Emblem.png",
+    icon: "/KHEM%20Tattoo%20%26%20Piercing%20Emblem.webp",
   },
   robots: {
     index: true,
