@@ -65,12 +65,14 @@ export default function WhyKhem() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="flex flex-col gap-4 border border-charcoal/10 bg-ivory-deep p-6 sm:p-8"
+              whileHover={{ y: -6 }}
+              transition={{ type: "spring", stiffness: 320, damping: 22 }}
+              className="group flex flex-col gap-4 border border-charcoal/10 bg-ivory-deep p-6 transition-all duration-300 hover:border-gold/50  hover:shadow-[0_16px_40px_rgba(34,30,27,0.08)] sm:p-8"
             >
-              <h3 className="font-display text-2xl tracking-tightest2 text-charcoal sm:text-3xl">
+              <h3 className="font-display text-2xl tracking-tightest2 text-charcoal transition-colors duration-300 group-hover:text-gold sm:text-3xl">
                 {card.title}
               </h3>
-              <p className="font-sans text-sm leading-relaxed text-charcoal/75 sm:text-base">
+              <p className="font-sans text-sm leading-relaxed text-charcoal/75 transition-colors duration-300 group-hover:text-charcoal sm:text-base">
                 {card.body}
               </p>
             </motion.article>
@@ -78,7 +80,7 @@ export default function WhyKhem() {
         </div>
 
         <motion.div
-          className="mt-5 grid grid-cols-2 gap-5 sm:grid-cols-4"
+          className="mt-10 grid grid-cols-2 gap-2 border-t border-charcoal/10 pt-8 sm:grid-cols-4 sm:gap-6"
           custom={3}
           variants={revealVariant}
           initial="hidden"
@@ -88,12 +90,12 @@ export default function WhyKhem() {
           {site.stats.map((stat, i) => (
             <div
               key={i}
-              className="border border-charcoal/10 bg-charcoal p-5 text-center sm:p-6"
+              className="group min-w-0 text-center sm:text-left"
             >
-              <p className="font-display text-2xl tracking-tightest2 text-bone sm:text-4xl">
+              <p className="font-display text-2xl tracking-tightest2 text-charcoal transition-colors duration-300 group-hover:text-gold sm:text-4xl">
                 {stat.value}
               </p>
-              <p className="mt-1 font-mono text-[9px] font-bold uppercase tracking-wide2 text-bone/55 sm:text-[11px]">
+              <p className="mt-1 truncate font-mono text-[8px] font-bold uppercase tracking-[0.12em] text-charcoal/50 transition-colors duration-300 group-hover:text-charcoal/70 sm:text-[11px] sm:tracking-wide2">
                 {stat.label}
               </p>
             </div>
@@ -112,7 +114,7 @@ export default function WhyKhem() {
             href={whatsappHref}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-3 rounded-full bg-charcoal px-7 py-3.5 font-sans text-[12px] font-bold uppercase tracking-wide2 text-bone transition-all duration-300 hover:-translate-y-0.5 hover:bg-charcoal/90"
+            className="inline-flex items-center gap-3 rounded-full bg-charcoal px-7 py-3.5 font-sans text-[12px] font-bold uppercase tracking-wide2 text-bone transition-all duration-300 hover:-translate-y-0.5 hover:bg-charcoal/90 hover:shadow-[0_12px_32px_rgba(34,30,27,0.2)]"
           >
             Book a Session
           </a>

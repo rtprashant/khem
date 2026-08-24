@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Instagram, ArrowDown } from "lucide-react";
+import { Instagram, MessageCircle, Phone, ArrowDown } from "lucide-react";
 import { site } from "@/data/site";
 import Image from "next/image";
 
@@ -139,9 +139,17 @@ export default function EntryExperience() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.45, ease }}
-            aria-label="Studio social"
+            aria-label="Direct Studio Contact"
             className="flex items-center gap-6 font-mono text-xs font-semibold uppercase tracking-wide2 text-bone/70"
           >
+            <a
+              href={site.phoneHref}
+              className="inline-flex items-center gap-2 transition-colors hover:text-bone"
+              aria-label="Call Khem Tattoo"
+            >
+              <Phone size={13} strokeWidth={1.5} />
+              <span>Call</span>
+            </a>
             <a
               href={site.instagram}
               target="_blank"
@@ -151,6 +159,16 @@ export default function EntryExperience() {
             >
               <Instagram size={13} strokeWidth={1.5} />
               <span>Instagram</span>
+            </a>
+            <a
+              href={whatsappHref}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 transition-colors hover:text-bone"
+              aria-label="WhatsApp Khem Tattoo"
+            >
+              <MessageCircle size={13} strokeWidth={1.5} />
+              <span>WhatsApp</span>
             </a>
           </motion.nav>
 
