@@ -1,0 +1,245 @@
+export const reviews = [
+  {
+    name: "Kunal Dogra",
+    rating: 5,
+    text: "Amazing work done by khem. It was my first tattoo and i am glad i found the best artist to do it. He listened patiently to my idea and design then, improved it even more by adding his touch. Apart from the tattoo, he is such a good guy, we had a wonderful time chatting while the tattoo was done. Great experience. My advise, please avoid overrated big brand names in gurgaon and visit him if you want a good tattoo done by an expert.",
+    source: "Google",
+  },
+  {
+    name: "Rishu Kr Singh",
+    rating: 5,
+    text: "My experience at Khem Tattoo and Piercing was truly amazing. The studio has a great ambience—very clean, well-organized, and comfortable, which immediately gives a positive feeling. The quality of the work is outstanding, with great attention to detail and proper use of professional equipment. I was also impressed by how seriously they take hygiene and safety during the entire process. The staff is very well-mannered, friendly, and respectful, and they make sure the customer feels relaxed and confident before starting. Overall, it was a fantastic experience, and I would definitely recommend Khem Tattoo and Piercing to anyone who wants high-quality work with great service",
+    source: "Google",
+  },
+  {
+    name: "Bhavana Sharma",
+    rating: 5,
+    text: "This was my second tattoo, and it was a very special and personal one as it was my grandfather's signature. Khim did a fantastic job and captured every detail perfectly. He was very helpful, guided me throughout the process, and followed proper hygiene and safety precautions. The entire experience was smooth, comfortable, and professional. I'm truly happy with the result and highly recommend Khim to anyone looking for quality tattoo work!",
+    source: "Google",
+  },
+  {
+    name: "Robin Laha",
+    rating: 5,
+    text: "Had a great experience getting tattooed by Khem. The artwork was clean, detailed, and exactly as discussed before the session. He paid attention to the small details and made sure the design fit well with the placement. The process was professional, and the final result exceeded my expectations. Really happy with how the tattoo turned out and would definitely recommend Khem to anyone looking for quality tattoo work.",
+    source: "Google",
+  },
+  {
+    name: "Arpit Bhardwaj",
+    rating: 5,
+    text: "It was my first experience with Khem, and it was absolutely awesome! This was my first tattoo, and I was a bit nervous, but Khem made me feel comfortable throughout the entire process. He followed all the hygiene and safety precautions properly, was very professional, and explained everything clearly. He is also very helpful and friendly. I'm extremely happy with the result and would highly recommend Khem to anyone looking for a great tattoo experience!",
+    source: "Google",
+  },
+];
+
+export const piercingCategories = [
+  "All",
+  "Ear Curation",
+  "Facial & Nose",
+  "Body & Navel",
+  "Jewellery & Sets",
+];
+
+export const piercingGallery = [
+  {
+    id: 1,
+    title: "Double Helix & Conch Curation",
+    category: "Ear Curation",
+    image: "/piercing/IMG_0484.webp",
+    description: "Implant-grade ASTM F-136 titanium studs with mirror polish finish.",
+    jewellery: "ASTM F-136 Titanium Studs",
+  },
+  {
+    id: 2,
+    title: "Precision Nostril Piercing",
+    category: "Facial & Nose",
+    image: "/piercing/IMG_3369.webp",
+    description: "Minimalist bezel-set cubic zirconia in hypoallergenic titanium.",
+    jewellery: "Bezel-Set Titanium",
+  },
+  {
+    id: 3,
+    title: "Tragus & Lobe Combination",
+    category: "Ear Curation",
+    image: "/piercing/IMG_4210.webp",
+    description: "Custom anatomical ear styling mapped for natural ear curvature.",
+    jewellery: "Internal Thread Titanium",
+  },
+  {
+    id: 4,
+    title: "Navel / Belly Accent",
+    category: "Body & Navel",
+    image: "/piercing/IMG_4353.webp",
+    description: "Curved barbell with crystal cluster for smooth healing.",
+    jewellery: "Curved Titanium Barbell",
+  },
+  {
+    id: 5,
+    title: "Septum Precision Placement",
+    category: "Facial & Nose",
+    image: "/piercing/IMG_6259.webp",
+    description: "Seamless titanium clicker placed in the sweet spot for painless healing.",
+    jewellery: "Titanium Clicker Ring",
+  },
+  {
+    id: 6,
+    title: "Industrial Bar Styling",
+    category: "Ear Curation",
+    image: "/piercing/IMG_6374.webp",
+    description: "Custom angled scaffold bar tailored to upper ear cartilage anatomy.",
+    jewellery: "Straight Titanium Barbell",
+  },
+  {
+    id: 7,
+    title: "Forward Helix & Flat Cluster",
+    category: "Ear Curation",
+    image: "/piercing/IMG_6503.webp",
+    description: "Multi-point cartilage constellation with gold-toned titanium.",
+    jewellery: "14K Gold / Anodized Titanium",
+  },
+  {
+    id: 8,
+    title: "Eyebrow Piercing",
+    category: "Facial & Nose",
+    image: "/piercing/IMG_8062.webp",
+    description: "Vertical curved barbell with micro-ball ends.",
+    jewellery: "Micro Curved Barbell",
+  },
+  {
+    id: 9,
+    title: "Lip / Medusa Placement",
+    category: "Facial & Nose",
+    image: "/piercing/IMG_8115.webp",
+    description: "Philtrum piercing with flat-back labret for oral safety and comfort.",
+    jewellery: "Flat-back Labret",
+  },
+  {
+    id: 10,
+    title: "Daith Piercing with Decorative Hoop",
+    category: "Ear Curation",
+    image: "/piercing/IMG_8506.webp",
+    description: "Intricate filigree heart clicker in the inner cartilage fold.",
+    jewellery: "Filigree Clicker Hoop",
+  },
+  {
+    id: 11,
+    title: "High Lobe Stack & Mini Hoop",
+    category: "Ear Curation",
+    image: "/piercing/IMG_8870.webp",
+    description: "Layered stack piercing designed for daily effortless wear.",
+    jewellery: "Solid Titanium Ring",
+  },
+  {
+    id: 12,
+    title: "Rook Piercing with Curved Gem Bar",
+    category: "Ear Curation",
+    image: "/piercing/IMG_8876.webp",
+    description: "Clean inner anti-helix puncture with prong-set gem accent.",
+    jewellery: "Prong-Set Gem Bar",
+  },
+  {
+    id: 13,
+    title: "Curated Ear Project",
+    category: "Jewellery & Sets",
+    image: "/piercing/IMG_8877.webp",
+    description: "Complete harmonious ear story combining 5 distinct piercings.",
+    jewellery: "Harmonized Titanium Set",
+  },
+  {
+    id: 14,
+    title: "Dermal Anchor Placement",
+    category: "Body & Navel",
+    image: "/piercing/KHM00617.webp",
+    description: "Single-point surface anchor with interchangeable gem top.",
+    jewellery: "Titanium Micro-Dermal",
+  },
+  {
+    id: 15,
+    title: "Snug & Outer Conch Balance",
+    category: "Ear Curation",
+    image: "/piercing/KHM00724.webp",
+    description: "Advanced cartilage technique with minimal tissue trauma.",
+    jewellery: "Internal Threaded Stud",
+  },
+  {
+    id: 16,
+    title: "Nostril Duo & High Nostril",
+    category: "Facial & Nose",
+    image: "/piercing/KHM00789.webp",
+    description: "Symmetrical nostril mapping aligned with facial contour.",
+    jewellery: "Bezel Titanium Studs",
+  },
+  {
+    id: 17,
+    title: "Upper Cartilage Cluster",
+    category: "Ear Curation",
+    image: "/piercing/KHM00811.webp",
+    description: "Triple flat piercing constellation with sparkling stone tops.",
+    jewellery: "Triple Stone Titanium",
+  },
+  {
+    id: 18,
+    title: "Minimalist Septum Horseshoe",
+    category: "Facial & Nose",
+    image: "/piercing/KHM00812.webp",
+    description: "Circular barbell with smooth finish and discreet flip-up capability.",
+    jewellery: "Circular Barbell",
+  },
+  {
+    id: 19,
+    title: "Gold-Tone Ear Styling",
+    category: "Jewellery & Sets",
+    image: "/piercing/KHM00980.webp",
+    description: "Warm anodized gold collection styled for special occasions.",
+    jewellery: "Anodized 18K Tone Titanium",
+  },
+  {
+    id: 20,
+    title: "Signature Khem Piercing Portfolio",
+    category: "Jewellery & Sets",
+    image: "/piercing/KHM01285.webp",
+    description: "Comprehensive studio showcase illustrating sterile excellence.",
+    jewellery: "Full Studio Selection",
+  },
+];
+
+export const piercingProtocols = [
+  {
+    title: "100% Single-Use Sterile Needles",
+    desc: "We never use piercing guns. Every procedure is performed with surgical-grade single-use sterile cannula needles opened directly in front of you.",
+  },
+  {
+    title: "ASTM F-136 Implant-Grade Titanium",
+    desc: "Only biologically inert, hypoallergenic materials (Titanium & 14k/18k Solid Gold) to ensure zero allergic reactions and accelerated healing.",
+  },
+  {
+    title: "Anatomical Ear & Body Mapping",
+    desc: "Piercings are placed according to your unique bone structure and cartilage anatomy for the most flattering aesthetic and optimal comfort.",
+  },
+  {
+    title: "Dedicated Aftercare & Check-Ups",
+    desc: "Complete written aftercare guides, sterile saline recommendations, and free downsizing/follow-up consultations until 100% healed.",
+  },
+];
+
+export const trustItems = [
+  {
+    title: "Crafted with intention",
+    body: "Every tattoo begins with understanding the person behind it — not a design pulled off a wall.",
+  },
+  {
+    title: "Hygiene first",
+    body: "Sterile single-use needles, disposable setups, and professional sanitation practiced on every client, every time.",
+  },
+  {
+    title: "Custom artwork",
+    body: "No generic, copy-paste flash. Each piece is built around the client's idea, body, and story.",
+  },
+  {
+    title: "Artist-led consultation",
+    body: "The artist understands the idea, placement, and intent before the needle ever touches skin.",
+  },
+  {
+    title: "Aftercare, always",
+    body: "Clear, written aftercare guidance is given after every single session — no guesswork left to the client.",
+  },
+];

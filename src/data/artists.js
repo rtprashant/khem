@@ -1,0 +1,35 @@
+export const artists = [
+  {
+    id: "khem",
+    name: "Khem",
+    role: "Founder · Tattoo Artist & Professional Piercer",
+    image: "/KHM.JPG",
+    bio: "Khem is an experienced tattooist and professional piercer with over 8 years of experience in the body art industry. Known for precision, realism, colour tattoos, creativity, and a deep understanding of client needs, Khem delivers exceptional custom tattoos and safe, hygienic piercings in a welcoming studio environment.",
+    specialties: [
+      "Realism",
+      "Colour Tattoos",
+      "Custom Tattoos",
+      "Minimalist Tattoos",
+      "Professional Piercing",
+      "Precision",
+      "Hygiene",
+    ],
+    experience: "8+ Years",
+    instagram: "https://www.instagram.com/khem_tattoo/",
+  },
+  {
+    id: "snazzy",
+    name: "Snazzy",
+    role: "Tattoo Artist",
+    image: "/SNAZZY.JPG",
+    bio: "Snazzy brings a thoughtful, detail-first approach to every piece. She works closely with clients to turn personal ideas into clean, expressive tattoos, combining a calm studio presence with the patience and precision that great work demands.",
+    specialties: [
+      "Custom Tattoos",
+      "Fine Line",
+      "Detail Work",
+      "Minimalist Tattoos",
+    ],
+    experience: "Studio Artist",
+    instagram: "https://www.instagram.com/khem_tattoo/",
+  },
+];

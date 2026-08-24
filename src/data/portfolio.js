@@ -1,0 +1,64 @@
+export const categories = [
+  "All",
+  "Fine Line",
+  "Realism",
+  "Black & Grey",
+  "Custom & Script",
+  "Illustrative",
+  "Cover-Up",
+];
+
+export const tattooImages = [
+  { id: "t1",  src: "/tattoo/IMG_1062.webp",  alt: "Fine line botanical piece", size: "tall" },
+  { id: "t2",  src: "/tattoo/IMG_1064.webp",  alt: "Micro-realism portrait study", size: "square" },
+  { id: "t3",  src: "/tattoo/IMG_1223.webp",  alt: "High-contrast black & grey work", size: "tall" },
+  { id: "t4",  src: "/tattoo/IMG_1262.webp",  alt: "Minimalist geometry & dotwork", size: "square" },
+  { id: "t5",  src: "/tattoo/IMG_2088.webp",  alt: "Anatomical realism & shadow", size: "wide" },
+  { id: "t6",  src: "/tattoo/IMG_2089.webp",  alt: "Custom script & lettering", size: "square" },
+  { id: "t7",  src: "/tattoo/IMG_2090.webp",  alt: "Illustrative dark art", size: "tall" },
+  { id: "t8",  src: "/tattoo/IMG_2091.webp",  alt: "Textured blackwork forearm", size: "square" },
+  { id: "t9",  src: "/tattoo/IMG_2092.webp",  alt: "Detailed spine alignment", size: "tall" },
+  { id: "t10", src: "/tattoo/IMG_2093.webp",  alt: "Mythological realism", size: "wide" },
+  { id: "t11", src: "/tattoo/IMG_2094.webp",  alt: "Precision line florals", size: "square" },
+  { id: "t12", src: "/tattoo/IMG_2095.webp",  alt: "Custom cover-up reconstruction", size: "tall" },
+  { id: "t13", src: "/tattoo/IMG_2096.webp",  alt: "Monochrome shadow depth", size: "square" },
+  { id: "t14", src: "/tattoo/IMG_2393.webp",  alt: "Illustrative wildlife concept", size: "wide" },
+  { id: "t15", src: "/tattoo/IMG_2584.webp",  alt: "Bespoke typography & calligraphy", size: "square" },
+  { id: "t16", src: "/tattoo/IMG_8979.webp",  alt: "Dark shading & texture mastery", size: "tall" },
+  { id: "t17", src: "/tattoo/IMG_8989.webp",  alt: "Fine needle silhouette", size: "square" },
+  { id: "t18", src: "/tattoo/IMG_8990.webp",  alt: "Sculptural realism", size: "wide" },
+  { id: "t19", src: "/tattoo/KHM01034.webp",  alt: "Signature Khem studio piece", size: "tall" },
+];
+
+export const piercingImages = [
+  { id: "p1",  src: "/piercing/IMG_0484.webp",  alt: "Double helix & conch curation" },
+  { id: "p2",  src: "/piercing/IMG_3369.webp",  alt: "Precision nostril piercing" },
+  { id: "p3",  src: "/piercing/IMG_4210.webp",  alt: "Tragus & lobe combination" },
+  { id: "p4",  src: "/piercing/IMG_4353.webp",  alt: "Navel / belly accent" },
+  { id: "p5",  src: "/piercing/IMG_6259.webp",  alt: "Septum precision placement" },
+  { id: "p6",  src: "/piercing/IMG_6374.webp",  alt: "Industrial bar styling" },
+  { id: "p7",  src: "/piercing/IMG_6503.webp",  alt: "Forward helix & flat cluster" },
+  { id: "p8",  src: "/piercing/IMG_8062.webp",  alt: "Eyebrow piercing" },
+  { id: "p9",  src: "/piercing/IMG_8115.webp",  alt: "Lip / medusa placement" },
+  { id: "p10", src: "/piercing/IMG_8506.webp",  alt: "Daith piercing with decorative hoop" },
+  { id: "p11", src: "/piercing/IMG_8870.webp",  alt: "High lobe stack & mini hoop" },
+  { id: "p12", src: "/piercing/IMG_8876.webp",  alt: "Rook piercing with curved gem bar" },
+  { id: "p13", src: "/piercing/IMG_8877.webp",  alt: "Curated ear project" },
+  { id: "p14", src: "/piercing/KHM00617.webp",  alt: "Dermal anchor placement" },
+  { id: "p15", src: "/piercing/KHM00724.webp",  alt: "Snug & outer conch balance" },
+  { id: "p16", src: "/piercing/KHM00789.webp",  alt: "Nostril duo & high nostril" },
+  { id: "p17", src: "/piercing/KHM00811.webp",  alt: "Upper cartilage cluster" },
+  { id: "p18", src: "/piercing/KHM00812.webp",  alt: "Minimalist septum horseshoe" },
+  { id: "p19", src: "/piercing/KHM00980.webp",  alt: "Gold-tone ear styling" },
+  { id: "p20", src: "/piercing/KHM01285.webp",  alt: "Signature Khem piercing portfolio" },
+];
+
+// Legacy compat export for existing Work.jsx
+export const portfolio = tattooImages.map((img, i) => ({
+  id: i + 1,
+  title: img.alt,
+  category: "All",
+  image: img.src,
+  size: img.size || "square",
+  tag: "Tattoo",
+}));
