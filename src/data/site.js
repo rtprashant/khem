@@ -21,7 +21,7 @@ export const site = {
     "Gurgaon, Haryana 122002",
   ],
 
-  phone: "062944 58070",
+  phone: "+91 6294458070",
   phoneHref: "tel:+916294458070",
 
   whatsappNumber: "916294458070",

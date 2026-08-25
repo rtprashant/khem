@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Instagram, MapPin, Phone, ArrowRight, ShieldCheck, Star } from "lucide-react";
+import { Instagram, MapPin, Phone, ArrowRight, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 import { site } from "@/data/site";
 import GoogleIcon from "./GoogleIcon";
@@ -10,7 +10,7 @@ const ease = [0.16, 1, 0.3, 1];
 
 export default function EntryExperience() {
   const whatsappHref = `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(site.whatsappMessage)}`;
-  const stats = [["google", "5.0", "Star reviews"], ["youtube", "100K+", "YouTube subscribers"], ["◇", "100%", "Safe & hygienic"], ["☆", "10+", "Years of experience"]];
+  const stats = [["google", "5.0 ★", "Google Rating"], ["youtube", "100K+", "YouTube subscribers"], ["◇", "100%", "Safe & hygienic"], ["☆", "10+", "Years of experience"]];
 
   return (
     <section id="home" className="texture-dark relative overflow-hidden px-5 pb-5 pt-28 text-white sm:px-8 sm:pb-8 lg:pt-32">
@@ -37,8 +37,8 @@ export default function EntryExperience() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
             </div>
             <div className="absolute -right-2 top-[30%] grid origin-right scale-[.68] gap-2 sm:-right-10 sm:scale-100">
-              <div className="rounded-xl border border-white/50 bg-black/90 p-4 shadow-2xl backdrop-blur sm:p-5"><div className="flex items-center gap-3"><GoogleIcon /><strong className="font-display text-3xl">5.0</strong></div><p className="mt-2 text-[9px] font-bold uppercase tracking-wider">Star reviews</p><div className="mt-2 flex text-[#ba9255]">{[0, 1, 2, 3, 4].map(i => <Star key={i} size={15} fill="currentColor" />)}</div></div>
-              <div className="rounded-xl border border-white/50 bg-black/90 p-4 shadow-2xl backdrop-blur sm:p-5"><div className="flex items-center gap-3"><ShieldCheck className="text-[#ba9255]" /><strong className="font-display text-3xl">100%</strong></div><p className="mt-2 text-[9px] font-bold uppercase tracking-wider">Hygiene &amp; safety</p></div>
+              <div className="rounded-xl border border-white/50 bg-black/90 p-4 text-center shadow-2xl backdrop-blur sm:p-5"><div className="flex items-center justify-center gap-3"><GoogleIcon /><strong className="font-display text-3xl text-[#ba9255]">5.0 ★</strong></div><p className="mt-2 text-[9px] font-bold uppercase tracking-wider">Google reviews</p></div>
+              <div className="rounded-xl border border-white/50 bg-black/90 p-4 text-center shadow-2xl backdrop-blur sm:p-5"><div className="flex items-center justify-center gap-3"><ShieldCheck className="text-[#ba9255]" /><strong className="font-display text-3xl">Strict</strong></div><p className="mt-2 text-[9px] font-bold uppercase tracking-wider">Hygiene &amp; safety Standards</p></div>
             </div>
           </motion.div>
         </div>
