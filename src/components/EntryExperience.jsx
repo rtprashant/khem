@@ -10,7 +10,7 @@ const ease = [0.16, 1, 0.3, 1];
 
 export default function EntryExperience() {
   const whatsappHref = `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(site.whatsappMessage)}`;
-  const stats = [["google", "5.0 ★", "Google Rating"], ["youtube", "100K+", "YouTube subscribers"], ["◇", "100%", "Safe & hygienic"], ["☆", "10+", "Years of experience"]];
+  const stats = [["google", "5.0 ★", "Google Rating"], ["youtube", "100K+", "YouTube subscribers"], ["◇", "Strict", "Hygiene & safety Standards"], ["☆", "10+", "Years of experience"]];
 
   return (
     <section id="home" className="texture-dark relative overflow-hidden px-5 pb-5 pt-28 text-white sm:px-8 sm:pb-8 lg:pt-32">

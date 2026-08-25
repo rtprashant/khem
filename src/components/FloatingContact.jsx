@@ -1,32 +1,17 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { Phone, MessageCircle } from "lucide-react";
 import { site } from "@/data/site";
 
 export default function FloatingContact() {
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setVisible(window.scrollY > 300);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   const whatsappHref = `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(
     site.whatsappMessage
   )}`;
 
   return (
     <div
-      className={`fixed bottom-6 right-4 z-[90] flex flex-col gap-3 transition-all duration-500 sm:bottom-8 sm:right-6 ${
-        visible
-          ? "pointer-events-auto translate-y-0 opacity-100"
-          : "pointer-events-none translate-y-4 opacity-0"
-      }`}
+      className="fixed bottom-6 right-4 z-[90] flex flex-col gap-3 sm:bottom-8 sm:right-6"
       aria-label="Quick contact"
-      aria-hidden={!visible}
     >
       <a
         href={whatsappHref}
