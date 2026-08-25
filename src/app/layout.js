@@ -32,22 +32,22 @@ export const metadata = {
     template: `%s — Khem Tattoo & Piercing`,
   },
   description:
-    "Custom tattoos, hyper-realism, fine-line tattoos and professional body piercing in Gurgaon. Visit Khem Tattoo at MGF Metropolis Mall, Sector 28, Gurugram.",
+    "Custom tattoos, hyper-realism, fine-line tattoos and professional body piercing in Gurgaon. Visit Khem Tattoo at MGF Metropolis Mall, Sector 28, Gurgaon.",
   keywords: [
-    "tattoo artist in Gurugram",
-    "tattoo studio in Gurugram",
+    "tattoo artist in Gurgaon",
+    "tattoo studio in Gurgaon",
     "tattoo shop in Gurgaon",
     "tattoo artist Gurgaon",
-    "piercing studio Gurugram",
+    "piercing studio Gurgaon",
     "tattoo and piercing Gurgaon",
-    "custom tattoo Gurugram",
+    "custom tattoo Gurgaon",
     "realism tattoo Gurgaon",
     "colour tattoo Gurgaon",
     "Khem tattoo",
     "Khem piercing",
     "MGF Metropolis Mall tattoo",
-    "fine line tattoo Gurugram",
-    "black and grey tattoo Gurugram",
+    "fine line tattoo Gurgaon",
+    "black and grey tattoo Gurgaon",
     "hyper realism tattoo artist Gurgaon",
     "tattoo studio Sector 28 Gurgaon",
     "piercing studio Sector 28 Gurgaon",
@@ -56,7 +56,7 @@ export const metadata = {
   openGraph: {
     title: "Tattoo Studio in Gurgaon | Khem Tattoo & Piercing",
     description:
-      "Custom tattoos, hyper-realism, fine-line tattoos and professional body piercing at MGF Metropolis Mall, Sector 28, Gurugram.",
+      "Custom tattoos, hyper-realism, fine-line tattoos and professional body piercing at MGF Metropolis Mall, Sector 28, Gurgaon.",
     url: siteUrl,
     siteName: site.name,
     locale: "en_IN",
@@ -74,7 +74,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Tattoo Studio in Gurgaon | Khem Tattoo & Piercing",
     description:
-      "Custom tattoos and professional body piercing at MGF Metropolis Mall, Sector 28, Gurugram.",
+      "Custom tattoos and professional body piercing at MGF Metropolis Mall, Sector 28, Gurgaon.",
     images: ["/hero-tattoo.webp"],
   },
   alternates: {
@@ -106,7 +106,7 @@ export default function RootLayout({ children }) {
       "@type": "PostalAddress",
       streetAddress:
         "Shop No. LG 41, Lower Ground Floor, Near Spar, MGF Metropolis Mall, Maruti Vihar, Sector 28",
-      addressLocality: "Gurugram",
+      addressLocality: "Gurgaon",
       addressRegion: "Haryana",
       postalCode: "122002",
       addressCountry: "IN",
@@ -114,7 +114,7 @@ export default function RootLayout({ children }) {
     openingHours: ["Mo-Su 11:00-22:00"],
     sameAs: [site.instagram],
     hasMap: site.mapsUrl,
-    areaServed: ["Gurugram", "Gurgaon", "Delhi NCR"],
+    areaServed: ["Gurgaon", "Gurgaon", "Delhi NCR"],
     knowsAbout: [
       "Custom tattoos",
       "Hyper-realism tattoos",

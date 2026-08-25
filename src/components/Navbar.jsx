@@ -20,6 +20,7 @@ const NAV_ITEMS = [
 export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [mobileSection, setMobileSection] = useState("tattoo");
   const [scrolled, setScrolled] = useState(false);
   // Whether we're in the dark hero zone
   const [isDark, setIsDark] = useState(true);
@@ -40,6 +41,11 @@ export default function Navbar() {
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, [pathname]);
+
+  useEffect(() => {
+    const view = new URLSearchParams(window.location.search).get("view");
+    setMobileSection(pathname.startsWith("/academy") ? "academy" : view === "piercing" ? "piercing" : "tattoo");
   }, [pathname]);
 
   useEffect(() => {
@@ -95,6 +101,27 @@ export default function Navbar() {
             className="object-contain object-center"
           />
         </Link>
+
+        {/* Mobile section shortcuts */}
+        <div className="absolute left-1/2 flex -translate-x-1/2 items-center rounded-full border border-bone/10 bg-ink/95 p-1 shadow-lg lg:hidden">
+          {NAV_ITEMS.filter((item) => ["Tattoo", "Piercing", "Academy"].includes(item.label)).map((item) => {
+            const section = item.label.toLowerCase();
+            const active = mobileSection === section;
+            return (
+              <Link
+                key={`${item.label}-shortcut`}
+                href={hrefFor(item.href)}
+                onClick={() => {
+                  setMobileSection(section);
+                  selectPortfolioView(item.view);
+                }}
+                className={`rounded-full px-2.5 py-2 font-mono text-[8px] font-bold uppercase tracking-[.12em] transition-colors min-[380px]:px-3 min-[380px]:text-[9px] sm:px-4 sm:text-[10px] ${active ? "bg-[#ba9255] text-white" : "text-bone/75 hover:text-bone"}`}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
+        </div>
 
         {/* Desktop links */}
         <ul className="hidden items-center gap-8 font-sans text-[12px] font-bold uppercase tracking-wide2 lg:flex">

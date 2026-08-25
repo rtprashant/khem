@@ -7,18 +7,18 @@ export const site = {
   shortName: "Khem",
   tagline: "Where your vision meets expert hands.",
   description:
-    "Khem Tattoo & Piercing is a premium custom tattoo and piercing studio in Gurugram, led by Khem — 10+ years of expertise in realism, colour tattoos, fine line, and professional body piercing. 5.0★ on Google.",
+    "Khem Tattoo & Piercing is a premium custom tattoo and piercing studio in Gurgaon, led by Khem — 10+ years of expertise in realism, colour tattoos, fine line, and professional body piercing. 5.0★ on Google.",
 
-  location: "Gurugram, Haryana",
-  locationShort: "Gurugram",
+  location: "Gurgaon, Haryana",
+  locationShort: "Gurgaon",
 
   address:
-    "Shop No. LG 41, Lower Ground Floor, Near Spar, MGF Metropolis Mall, Maruti Vihar, Sector 28, Gurugram, Haryana 122002",
+    "Shop No. LG 41, Lower Ground Floor, Near Spar, MGF Metropolis Mall, Maruti Vihar, Sector 28, Gurgaon, Haryana 122002",
   addressLines: [
     "Shop No. LG 41, Lower Ground Floor",
     "Near Spar, MGF Metropolis Mall",
     "Maruti Vihar, Sector 28",
-    "Gurugram, Haryana 122002",
+    "Gurgaon, Haryana 122002",
   ],
 
   phone: "062944 58070",
@@ -36,7 +36,7 @@ export const site = {
   mapsEmbedUrl:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.0!2d77.0!3d28.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zKiAqTUdGIE1ldHJvcG9saXMgTWFsbCwgR3VyZ2Fvbg!5e0!3m2!1sen!2sin!4v1609459200000!5m2!1sen!2sin",
   mapsUrl:
-    "https://maps.google.com/?q=Khem+Tattoo+Piercing+MGF+Metropolis+Mall+Gurugram",
+    "https://maps.google.com/?q=Khem+Tattoo+Piercing+MGF+Metropolis+Mall+Gurgaon",
 
   hours: [
     { days: "Monday — Sunday", time: "Open 12 PM · Closes 10 PM" },
@@ -45,7 +45,7 @@ export const site = {
   googleRating: "5.0",
   googleReviewCount: "373+",
   googleReviewsUrl:
-    "https://www.google.com/search?q=Khem+Tattoo+%26+Piercing+Gurugram&tbm=lcl",
+    "https://www.google.com/search?q=Khem+Tattoo+%26+Piercing+Gurgaon&tbm=lcl",
 
   stats: [
     { value: "10+", label: "Years Experience" },

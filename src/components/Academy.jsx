@@ -41,7 +41,7 @@ export default function Academy() {
         <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-ink/25" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-ink/40" />
         <div className="container-khem relative z-10">
-          <p className="mb-5 text-[10px] font-bold uppercase tracking-wide3 text-[#ba9255] sm:text-[11px]">Khem Academy · Gurugram, Haryana</p>
+          <p className="mb-5 text-[10px] font-bold uppercase tracking-wide3 text-[#ba9255] sm:text-[11px]">Khem Academy · Gurgaon, Haryana</p>
           <h1 className="max-w-3xl font-display text-5xl leading-[0.94] tracking-tightest2 sm:text-6xl lg:text-7xl xl:text-[6.5rem]">
             Learn the craft.
             <br />
@@ -89,7 +89,7 @@ export default function Academy() {
                   rel="noreferrer"
                   className="mt-7 inline-flex max-w-full whitespace-nowrap rounded-full bg-[#ba9255] px-5 py-2.5 font-sans text-[10px] font-bold uppercase tracking-wider text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#c9a46c] sm:px-6 sm:text-[11px] sm:tracking-wide2"
                 >
-                  Enquire 
+                  Enquire
                 </a>
               </article>
             ))}

@@ -132,7 +132,7 @@ export default function Visit() {
             className="min-h-[320px] overflow-hidden rounded-sm border border-charcoal/15 bg-charcoal/5"
           >
             <iframe
-              title="Khem Tattoo & Piercing — MGF Metropolis Mall, Gurugram"
+              title="Khem Tattoo & Piercing — MGF Metropolis Mall, Gurgaon"
               src={`https://www.google.com/maps?q=${encodeURIComponent(site.address)}&output=embed`}
               className="h-full w-full min-h-[320px] grayscale-[0.4] contrast-[1.05]"
               loading="lazy"

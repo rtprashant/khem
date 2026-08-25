@@ -93,7 +93,7 @@ export default function Footer() {
 
         <div className="mt-14 flex flex-col justify-between gap-4 border-t border-charcoal/10 pt-6 font-mono text-[11px] uppercase tracking-wide text-charcoal/40 sm:flex-row">
           <p>© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
-          <p>Gurugram, Haryana, India</p>
+          <p>Gurgaon, Haryana, India</p>
         </div>
       </div>
     </footer>

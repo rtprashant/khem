@@ -22,7 +22,7 @@ export default function About() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-transparent to-transparent opacity-60" />
           <div className="absolute bottom-4 left-4 z-10 font-mono text-[10px] uppercase tracking-wide3 text-bone/80 bg-ink/60 px-3 py-1 rounded backdrop-blur-sm">
-            Khem Studio • Gurugram
+            Khem Studio • Gurgaon
           </div>
         </motion.div>
 

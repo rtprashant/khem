@@ -18,8 +18,8 @@ export default function EntryExperience() {
       <div className="container-khem relative z-10 px-0">
         <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_.95fr]">
           <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: .8, ease }} className="order-2 lg:order-1">
-            <p className="mb-4 font-mono text-[10px] font-bold uppercase tracking-[.28em] text-[#ba9255]">Gurugram&apos;s premium body art studio</p>
-            <h1 className="font-display text-[clamp(3.25rem,6.7vw,6.8rem)] leading-[.88] tracking-[.01em]">Tattoo And <br />Piercing Studio<br /><span className="text-[#ba9255]">in Gurugram</span></h1>
+            <p className="mb-4 font-mono text-[10px] font-bold uppercase tracking-[.28em] text-[#ba9255]">Gurgaon&apos;s premium body art studio</p>
+            <h1 className="font-display text-[clamp(3.25rem,6.7vw,6.8rem)] leading-[.88] tracking-[.01em]">Tattoo And <br />Piercing Studio<br /><span className="text-[#ba9255]">in Gurgaon</span></h1>
             <p className="mt-6 max-w-xl text-sm font-medium leading-7 text-white/70 sm:text-base">Custom Tattoos . Realism . Cover-Ups . Professional Piercing</p>
             <div className="mt-5 flex items-center gap-2 text-sm text-white/80"><MapPin size={19} className="text-[#ba9255]" /> MGF Metropolis Mall, Sector 28, Gurgaon</div>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
