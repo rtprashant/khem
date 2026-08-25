@@ -163,6 +163,35 @@ export default function Portfolio({ service = "tattoo" }) {
               {service === "piercing" ? "Portfolio" : "Portfolio"}
             </motion.h2>
           </div>
+
+          <motion.div
+            className="flex w-full flex-none items-center overflow-hidden rounded-full border border-white/35 bg-black sm:w-auto"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.15 }}
+            aria-label="Choose portfolio type"
+          >
+            {[
+              { label: "Tattoo", value: "tattoo", href: "/tattoo#portfolio" },
+              { label: "Piercing", value: "piercing", href: "/piercing#portfolio" },
+            ].map((item) => {
+              const active = service === item.value;
+              return (
+                <Link
+                  key={item.value}
+                  href={item.href}
+                  aria-current={active ? "page" : undefined}
+                  className={`relative flex-1 px-10 py-3 text-center font-sans text-[12px] uppercase tracking-wide2 transition-all duration-300 sm:flex-none ${active
+                    ? "rounded-full border border-[#ba9255] bg-[#ba9255] font-bold text-white"
+                    : "text-white/75 hover:text-white"
+                    }`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
+          </motion.div>
         </div>
 
         {/* Gallery grid */}

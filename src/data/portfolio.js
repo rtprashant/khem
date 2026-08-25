@@ -39,7 +39,7 @@ export const piercingImages = [
   { id: "p10", src: "/piercing/IMG_8506.webp", alt: "Daith piercing with decorative hoop" },
   { id: "p11", src: "/piercing/IMG_8870.webp", alt: "High lobe stack & mini hoop" },
   { id: "p12", src: "/piercing/IMG_8876.webp", alt: "Rook piercing with curved gem bar" },
-  // { id: "p13", src: "/piercing/IMG_8877.webp",  alt: "Curated ear project" },
+  { id: "p13", src: "/piercing/IMG_4991.webp", alt: "Curated ear piercing project" },
   { id: "p14", src: "/piercing/KHM00617.webp", alt: "Dermal anchor placement" },
   { id: "p15", src: "/piercing/KHM00724.webp", alt: "Snug & outer conch balance" },
   { id: "p16", src: "/piercing/KHM00789.webp", alt: "Nostril duo & high nostril" },
