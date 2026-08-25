@@ -17,9 +17,9 @@ export const metadata = {
     siteName: "Khem Tattoo & Piercing",
     locale: "en_IN",
     type: "website",
-    images: [{ url: "/piercing/hero-piercing.webp", alt: "Professional ear piercing by Khem Studio" }],
+    images: [{ url: "/piercing/IMG_4991.webp", alt: "Professional ear piercing by Khem Studio" }],
   },
-  twitter: { card: "summary_large_image", title, description, images: ["/piercing/hero-piercing.webp"] },
+  twitter: { card: "summary_large_image", title, description, images: ["/piercing/IMG_4991.webp"] },
   robots: { index: true, follow: true },
 };
 

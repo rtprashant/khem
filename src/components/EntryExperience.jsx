@@ -46,7 +46,7 @@ export default function EntryExperience({ service = "tattoo" }) {
           <motion.div initial={{ opacity: 0, scale: .96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: .9, ease, delay: .1 }} className="relative order-1 mx-auto w-full max-w-[250px] sm:max-w-[350px] lg:order-2 lg:max-w-[420px] xl:max-w-[450px]">
             <div className="relative aspect-[4/5] overflow-hidden rounded-xl border border-[#ba9255] bg-black">
               <Image
-                src={isPiercing ? "/piercing/hero-piercing.webp" : "/hero-tattoo.webp"}
+                src={isPiercing ? "/piercing/IMG_4991.webp" : "/hero-tattoo.webp"}
                 alt={isPiercing ? "Professional piercing by Khem Studio" : "Black and grey portrait tattoo by Khem"}
                 fill
                 priority
