@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useEffect, useRef } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
@@ -108,25 +108,9 @@ function Lightbox({ images, index, onClose, onPrev, onNext }) {
 }
 
 // ─── Main Portfolio section ───────────────────────────────────────────────────
-export default function Portfolio() {
-  const [activeTab, setActiveTab] = useState("tattoo"); // "tattoo" | "piercing"
+export default function Portfolio({ service = "tattoo" }) {
   const [lightboxIndex, setLightboxIndex] = useState(null);
-
-  useEffect(() => {
-    const requestedView = new URLSearchParams(window.location.search).get("view");
-    if (requestedView === "tattoo" || requestedView === "piercing") {
-      setActiveTab(requestedView);
-    }
-
-    const handlePortfolioView = (event) => {
-      const view = event.detail?.view;
-      if (view === "tattoo" || view === "piercing") setActiveTab(view);
-    };
-    window.addEventListener("khem-portfolio-view", handlePortfolioView);
-    return () => window.removeEventListener("khem-portfolio-view", handlePortfolioView);
-  }, []);
-
-  const images = activeTab === "tattoo" ? tattooImages : piercingImages;
+  const images = (service === "piercing" ? piercingImages : tattooImages).slice(0, 15);
 
   const openAt = useCallback((i) => setLightboxIndex(i), []);
   const close = useCallback(() => setLightboxIndex(null), []);
@@ -176,42 +160,15 @@ export default function Portfolio() {
               viewport={{ once: true }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             >
-              Portfolio
+              {service === "piercing" ? "Portfolio" : "Portfolio"}
             </motion.h2>
           </div>
-
-          {/* TATTOO | PIERCING Toggle */}
-          <motion.div
-            className="flex w-full flex-none items-center overflow-hidden rounded-full border border-white/35 bg-black sm:w-auto"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.15 }}
-          >
-            {["tattoo", "piercing"].map((tab) => (
-              <button
-                key={tab}
-                type="button"
-                onClick={() => {
-                  setActiveTab(tab);
-                  setLightboxIndex(null);
-                }}
-                className={`relative flex-1 cursor-pointer px-10 py-3 font-sans text-[12px] uppercase tracking-wide2 transition-all duration-300 sm:flex-none ${activeTab === tab
-                  ? "rounded-full border border-[#ba9255] bg-[#ba9255] font-bold text-white"
-                  : "text-white/75 hover:text-white"
-                  }`}
-                aria-pressed={activeTab === tab}
-              >
-                {tab.charAt(0).toUpperCase() + tab.slice(1)}
-              </button>
-            ))}
-          </motion.div>
         </div>
 
         {/* Gallery grid */}
         <AnimatePresence mode="wait">
           <motion.div
-            key={activeTab}
+            key={service}
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
@@ -221,7 +178,7 @@ export default function Portfolio() {
             {images.map((img, idx) => (
               <div
                 key={img.id}
-                className="aspect-[3/4]"
+                className={`aspect-[3/4] ${idx >= 10 ? "hidden lg:block" : ""}`}
               >
                 <PortfolioImage
                   src={img.src}

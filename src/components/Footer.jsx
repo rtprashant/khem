@@ -4,9 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 const NAV_LINKS = [
-  { label: "Home", href: "#home" },
-  { label: "Tattoo", href: "/?view=tattoo#portfolio" },
-  { label: "Piercing", href: "/?view=piercing#portfolio" },
+  { label: "Home", href: "/tattoo#home" },
+  { label: "Tattoo", href: "/tattoo" },
+  { label: "Piercing", href: "/piercing" },
   { label: "Academy", href: "/academy" },
   { label: "Artist", href: "#artist" },
   { label: "Visit", href: "#visit" },
@@ -74,7 +74,7 @@ export default function Footer() {
             {NAV_LINKS.map((item) => (
               <Link
                 key={item.label}
-                href={item.href.startsWith("#") ? `/${item.href}` : item.href}
+                href={item.href.startsWith("#") ? `/tattoo${item.href}` : item.href}
                 className="font-sans text-sm text-charcoal/55 transition-colors hover:text-[#ba9255]"
               >
                 {item.label}

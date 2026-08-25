@@ -9,9 +9,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 const NAV_ITEMS = [
-  { label: "Home", href: "#home" },
-  { label: "Tattoo", href: "/?view=tattoo#portfolio", view: "tattoo" },
-  { label: "Piercing", href: "/?view=piercing#portfolio", view: "piercing" },
+  { label: "Tattoo", href: "/tattoo" },
+  { label: "Piercing", href: "/piercing" },
   { label: "Academy", href: "/academy" },
   { label: "Artist", href: "#artist" },
   { label: "Visit", href: "#visit" },
@@ -44,8 +43,7 @@ export default function Navbar() {
   }, [pathname]);
 
   useEffect(() => {
-    const view = new URLSearchParams(window.location.search).get("view");
-    setMobileSection(pathname.startsWith("/academy") ? "academy" : view === "piercing" ? "piercing" : "tattoo");
+    setMobileSection(pathname.startsWith("/academy") ? "academy" : pathname.startsWith("/piercing") ? "piercing" : "tattoo");
   }, [pathname]);
 
   useEffect(() => {
@@ -59,12 +57,10 @@ export default function Navbar() {
   }, [open]);
 
   const close = useCallback(() => setOpen(false), []);
-  const selectPortfolioView = (view) => {
-    if (view) window.dispatchEvent(new CustomEvent("khem-portfolio-view", { detail: { view } }));
-  };
   const hrefFor = (href) => {
-    if (!pathname.startsWith("/academy") || !href.startsWith("#")) return href;
-    return href === "#home" ? "/" : `/${href}`;
+    if (!href.startsWith("#")) return href;
+    if (pathname === "/tattoo" || pathname === "/piercing") return href;
+    return `/tattoo${href}`;
   };
 
   // Color tokens based on dark/light section
@@ -113,7 +109,6 @@ export default function Navbar() {
                 href={hrefFor(item.href)}
                 onClick={() => {
                   setMobileSection(section);
-                  selectPortfolioView(item.view);
                 }}
                 className={`rounded-full px-2.5 py-2 font-mono text-[8px] font-bold uppercase tracking-[.12em] transition-colors min-[380px]:px-3 min-[380px]:text-[9px] sm:px-4 sm:text-[10px] ${active ? "bg-[#ba9255] text-white" : "text-bone/75 hover:text-bone"}`}
               >
@@ -129,7 +124,6 @@ export default function Navbar() {
             <li key={`${item.label}-${item.href}`}>
               <Link
                 href={hrefFor(item.href)}
-                onClick={() => selectPortfolioView(item.view)}
                 className={`relative pb-1 transition-all duration-300 after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full ${linkColor}`}
               >
                 {item.label}
@@ -141,7 +135,7 @@ export default function Navbar() {
         {/* Book Now CTA */}
         <div className="hidden items-center gap-3 lg:flex">
           <Link
-            href={hrefFor("#visit")}
+            href={hrefFor("#contact")}
             className={`rounded-full border px-5 py-2 font-sans text-[11px] font-bold uppercase tracking-wide2 transition-all duration-300 ${ctaStyles}`}
           >
             Book Now
@@ -180,7 +174,7 @@ export default function Navbar() {
                 >
                   <Link
                     href={hrefFor(item.href)}
-                    onClick={() => { selectPortfolioView(item.view); close(); }}
+                    onClick={close}
                     className="block py-1 leading-tight tracking-tightest2 hover:text-bone/70 transition-colors"
                   >
                     {item.label}

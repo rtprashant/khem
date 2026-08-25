@@ -73,6 +73,16 @@ export default function TheArtist() {
                   <p className="mt-2 font-mono text-[11px] uppercase tracking-wide2 text-[#ba9255]">
                     {teamArtist.role}
                   </p>
+                  <a
+                    href={teamArtist.instagram}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`Follow ${teamArtist.name} on Instagram`}
+                    className="mt-4 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wide2 text-white/70 transition-colors hover:text-[#ba9255]"
+                  >
+                    <Instagram size={16} aria-hidden="true" />
+                    {teamArtist.instagramHandle}
+                  </a>
                   <p className="mt-5 max-w-xl font-sans text-sm leading-relaxed text-white/70 sm:text-base">
                     {teamArtist.bio}
                   </p>

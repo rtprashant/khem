@@ -17,6 +17,7 @@ export const artists = [
     ],
     experience: "10+ Years",
     instagram: "https://www.instagram.com/khem_tattoo/",
+    instagramHandle: "khem_tattoo",
   },
   {
     id: "snazzy",
@@ -32,6 +33,7 @@ export const artists = [
       "Minimalist Tattoos",
     ],
     experience: "Studio Artist",
-    instagram: "https://www.instagram.com/khem_tattoo/",
+    instagram: "https://www.instagram.com/snazzy_ink/",
+    instagramHandle: "snazzy_ink",
   },
 ];

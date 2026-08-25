@@ -11,12 +11,12 @@ export const reviews = [
     text: "My experience at Khem Tattoo and Piercing was truly amazing. The studio has a great ambience—very clean, well-organized, and comfortable, which immediately gives a positive feeling. The quality of the work is outstanding, with great attention to detail and proper use of professional equipment. I was also impressed by how seriously they take hygiene and safety during the entire process. The staff is very well-mannered, friendly, and respectful, and they make sure the customer feels relaxed and confident before starting. Overall, it was a fantastic experience, and I would definitely recommend Khem Tattoo and Piercing to anyone who wants high-quality work with great service",
     source: "Google",
   },
-  {
-    name: "Bhavana Sharma",
-    rating: 5,
-    text: "This was my second tattoo, and it was a very special and personal one as it was my grandfather's signature. Khim did a fantastic job and captured every detail perfectly. He was very helpful, guided me throughout the process, and followed proper hygiene and safety precautions. The entire experience was smooth, comfortable, and professional. I'm truly happy with the result and highly recommend Khim to anyone looking for quality tattoo work!",
-    source: "Google",
-  },
+  // {
+  //   name: "Bhavana Sharma",
+  //   rating: 5,
+  //   text: "This was my second tattoo, and it was a very special and personal one as it was my grandfather's signature. Khim did a fantastic job and captured every detail perfectly. He was very helpful, guided me throughout the process, and followed proper hygiene and safety precautions. The entire experience was smooth, comfortable, and professional. I'm truly happy with the result and highly recommend Khim to anyone looking for quality tattoo work!",
+  //   source: "Google",
+  // },
   {
     name: "Robin Laha",
     rating: 5,
@@ -136,14 +136,14 @@ export const piercingGallery = [
     description: "Clean inner anti-helix puncture with prong-set gem accent.",
     jewellery: "Prong-Set Gem Bar",
   },
-  {
-    id: 13,
-    title: "Curated Ear Project",
-    category: "Jewellery & Sets",
-    image: "/piercing/IMG_8877.webp",
-    description: "Complete harmonious ear story combining 5 distinct piercings.",
-    jewellery: "Harmonized Titanium Set",
-  },
+  // {
+  //   id: 13,
+  //   title: "Curated Ear Project",
+  //   category: "Jewellery & Sets",
+  //   image: "/piercing/IMG_8877.webp",
+  //   description: "Complete harmonious ear story combining 5 distinct piercings.",
+  //   jewellery: "Harmonized Titanium Set",
+  // },
   {
     id: 14,
     title: "Dermal Anchor Placement",

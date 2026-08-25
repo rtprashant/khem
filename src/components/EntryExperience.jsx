@@ -8,8 +8,12 @@ import GoogleIcon from "./GoogleIcon";
 
 const ease = [0.16, 1, 0.3, 1];
 
-export default function EntryExperience() {
-  const whatsappHref = `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(site.whatsappMessage)}`;
+export default function EntryExperience({ service = "tattoo" }) {
+  const isPiercing = service === "piercing";
+  const whatsappMessage = isPiercing
+    ? "Hi Khem Tattoo, I would like to enquire about a piercing session."
+    : "Hi Khem Tattoo, I would like to enquire about a tattoo session.";
+  const whatsappHref = `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
   const stats = [["google", "5.0 ★", "Google Rating"], ["youtube", "100K+", "YouTube subscribers"], ["◇", "Strict", "Hygiene & safety Standards"], ["☆", "10+", "Years of experience"]];
 
   return (
@@ -19,8 +23,16 @@ export default function EntryExperience() {
         <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_.95fr]">
           <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: .8, ease }} className="order-2 lg:order-1">
             <p className="mb-4 font-mono text-[10px] font-bold uppercase tracking-[.28em] text-[#ba9255]">Gurgaon&apos;s premium body art studio</p>
-            <h1 className="font-display text-[clamp(3.25rem,6.7vw,6.8rem)] leading-[.88] tracking-[.01em]">Tattoo And <br />Piercing Studio<br /><span className="text-[#ba9255]">in Gurgaon</span></h1>
-            <p className="mt-6 max-w-xl text-sm font-medium leading-7 text-white/70 sm:text-base">Custom Tattoos . Realism . Cover-Ups . Professional Piercing</p>
+            <h1 className="font-display text-[clamp(3.25rem,6.7vw,6.8rem)] leading-[.88] tracking-[.01em]">
+              {isPiercing ? "Piercing And" : "Tattoo And"} <br />
+              {isPiercing ? "Tattoo Studio" : "Piercing Studio"}<br />
+              <span className="text-[#ba9255]">in Gurgaon</span>
+            </h1>
+            <p className="mt-6 max-w-xl text-sm font-medium leading-7 text-white/70 sm:text-base">
+              {isPiercing
+                ? "Professional Piercing . Ear Curation . Precision Placement . Custom Tattoos"
+                : "Custom Tattoos . Realism . Cover-Ups . Professional Piercing"}
+            </p>
             <div className="mt-5 flex items-center gap-2 text-sm text-white/80"><MapPin size={19} className="text-[#ba9255]" /> MGF Metropolis Mall, Sector 28, Gurgaon</div>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <a href={whatsappHref} target="_blank" rel="noreferrer" className="inline-flex w-full items-center justify-center gap-2 whitespace-nowrap rounded bg-[#ba9255] px-3 py-4 text-[10px] font-bold uppercase tracking-wider transition hover:bg-[#c9a46c] sm:w-auto sm:px-6 sm:text-xs">Book a free consultation <ArrowRight size={14} /></a>
@@ -33,7 +45,14 @@ export default function EntryExperience() {
           </motion.div>
           <motion.div initial={{ opacity: 0, scale: .96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: .9, ease, delay: .1 }} className="relative order-1 mx-auto w-full max-w-[250px] sm:max-w-[350px] lg:order-2 lg:max-w-[420px] xl:max-w-[450px]">
             <div className="relative aspect-[4/5] overflow-hidden rounded-xl border border-[#ba9255] bg-black">
-              <Image src="/hero-tattoo.webp" alt="Black and grey portrait tattoo by Khem" fill priority sizes="(max-width: 1024px) 100vw, 48vw" className="object-cover" />
+              <Image
+                src={isPiercing ? "/piercing/hero-piercing.webp" : "/hero-tattoo.webp"}
+                alt={isPiercing ? "Professional piercing by Khem Studio" : "Black and grey portrait tattoo by Khem"}
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 48vw"
+                className="object-cover"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
             </div>
             <div className="absolute -right-2 top-[30%] grid origin-right scale-[.68] gap-2 sm:-right-10 sm:scale-100">
