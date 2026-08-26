@@ -20,6 +20,8 @@ export const site = {
     "Maruti Vihar, Sector 28",
     "Gurgaon, Haryana 122002",
   ],
+  mapsAddress:
+    "Shop No. LG 41 Lower Ground Floor, Khem Tattoo and Piercing, Near Spar, MGF Metropolis Mall, Maruti Vihar, Sector 28, Housing Colony, Gurugram, Sarhol, Haryana 122002",
 
   phone: "+91 6294458070",
   phoneHref: "tel:+916294458070",
@@ -36,7 +38,7 @@ export const site = {
   mapsEmbedUrl:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.0!2d77.0!3d28.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zKiAqTUdGIE1ldHJvcG9saXMgTWFsbCwgR3VyZ2Fvbg!5e0!3m2!1sen!2sin!4v1609459200000!5m2!1sen!2sin",
   mapsUrl:
-    "https://maps.google.com/?q=Khem+Tattoo+Piercing+MGF+Metropolis+Mall+Gurgaon",
+    "https://maps.google.com/?q=Shop+No.+LG+41+Lower+Ground+Floor,+Khem+Tattoo+and+Piercing,+Near+Spar,+MGF+Metropolis+Mall,+Maruti+Vihar,+Sector+28,+Housing+Colony,+Gurugram,+Sarhol,+Haryana+122002",
 
   hours: [
     { days: "Monday — Sunday", time: "Open 12 PM · Closes 10 PM" },
