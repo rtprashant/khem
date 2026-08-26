@@ -81,7 +81,14 @@ export const metadata = {
     canonical: siteUrl,
   },
   icons: {
-    icon: "/KHEM%20Tattoo%20%26%20Piercing%20Emblem.webp",
+    icon: [
+      {
+        url: "/KHEM%20Tattoo%20%26%20Piercing%20Emblem.webp",
+        type: "image/webp",
+        sizes: "1280x1280",
+      },
+    ],
+    apple: "/KHEM%20Tattoo%20%26%20Piercing%20Emblem.webp",
   },
   robots: {
     index: true,
