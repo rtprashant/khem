@@ -133,7 +133,7 @@ export default function Visit() {
           >
             <iframe
               title="Khem Tattoo & Piercing — MGF Metropolis Mall, Gurgaon"
-              src={`https://www.google.com/maps?q=${encodeURIComponent(site.mapsAddress)}&output=embed`}
+              src={site.mapsEmbedUrl}
               className="h-full w-full min-h-[320px] grayscale-[0.4] contrast-[1.05]"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
