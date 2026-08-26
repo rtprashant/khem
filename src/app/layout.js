@@ -82,13 +82,11 @@ export const metadata = {
   },
   icons: {
     icon: [
-      {
-        url: "/KHEM%20Tattoo%20%26%20Piercing%20Emblem.webp",
-        type: "image/webp",
-        sizes: "1280x1280",
-      },
+      { url: "/favicon.ico", type: "image/x-icon", sizes: "16x16" },
+      { url: "/favicon.ico", type: "image/x-icon", sizes: "32x32" },
+      { url: "/favicon.ico", type: "image/x-icon", sizes: "48x48" },
     ],
-    apple: "/KHEM%20Tattoo%20%26%20Piercing%20Emblem.webp",
+    apple: "/favicon.ico",
   },
   robots: {
     index: true,
