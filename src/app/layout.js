@@ -17,6 +17,7 @@ import "@fontsource/space-mono/400.css";
 import "@fontsource/space-mono/700.css";
 import "./globals.css";
 import { site } from "@/data/site";
+import Script from "next/script";
 
 const fontVars = "font-vars";
 // Keep every canonical signal on the same public origin. Set NEXT_PUBLIC_SITE_URL
@@ -137,6 +138,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={fontVars}>
       <body>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17930602377"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-gtag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17930602377');
+          `}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
