@@ -24,8 +24,8 @@ export default function EntryExperience({ service = "tattoo" }) {
           <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: .8, ease }} className="order-2 lg:order-1">
             <p className="mb-4 font-mono text-[10px] font-bold uppercase tracking-[.28em] text-[#ba9255]">Gurgaon&apos;s premium body art studio</p>
             <h1 className="font-display text-[clamp(3.25rem,6.7vw,6.8rem)] leading-[.88] tracking-[.01em]">
-              {isPiercing ? "Piercing And" : "Tattoo And"} <br />
-              {isPiercing ? "Tattoo Studio" : "Piercing Studio"}<br />
+              {isPiercing ? "Piercing Studio" : "Tattoo Studio"} <br />
+              {/* {isPiercing ? "Tattoo Studio" : "Piercing Studio"}<br /> */}
               <span className="text-[#ba9255]">in Gurgaon</span>
             </h1>
             <p className="mt-6 max-w-xl text-sm font-medium leading-7 text-white/70 sm:text-base">
