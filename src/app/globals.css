@@ -153,3 +153,7 @@ select:focus-visible,
     scroll-behavior: auto !important;
   }
 }
+
+html {
+  scrollbar-gutter: stable;
+}

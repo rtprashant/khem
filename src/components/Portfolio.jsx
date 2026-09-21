@@ -35,6 +35,11 @@ function PortfolioImage({ src, alt, priority = false, onOpen, index }) {
       />
       {/* Hover overlay */}
       <div className="absolute inset-0 bg-ink/25 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/55 to-transparent px-3 pb-3 pt-10 text-left">
+        <span className="font-sans text-[10px] leading-snug text-white sm:text-xs">
+          {alt}
+        </span>
+      </div>
     </motion.button>
   );
 }
@@ -44,9 +49,8 @@ function Lightbox({ images, index, onClose, onPrev, onNext }) {
   const item = images[index];
   return (
     <motion.div
-      initial={{ opacity: 0 }}
+      initial={false}
       animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
       className="fixed inset-0 z-[200] flex items-center justify-center bg-ink/96 px-4 backdrop-blur-md"
       role="dialog"
       aria-modal="true"
@@ -71,7 +75,7 @@ function Lightbox({ images, index, onClose, onPrev, onNext }) {
       {item && (
         <motion.div
           key={item.id}
-          initial={{ opacity: 0, scale: 0.97 }}
+          initial={false}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.2 }}
           className="relative w-full max-w-2xl px-2 pb-6 pt-14 sm:px-0 sm:pb-8"
@@ -85,6 +89,11 @@ function Lightbox({ images, index, onClose, onPrev, onNext }) {
               sizes="(max-width: 768px) 100vw, 700px"
               className="object-contain"
             />
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/55 to-transparent px-4 pb-4 pt-14 pr-32">
+              <p className="font-sans text-sm leading-snug text-white sm:text-base">
+                {item.alt}
+              </p>
+            </div>
             <Link
               href="#contact"
               onClick={onClose}

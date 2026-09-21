@@ -31,7 +31,7 @@ export default function EntryExperience({ service = "tattoo" }) {
             <p className="mt-6 max-w-xl text-sm font-medium leading-7 text-white/70 sm:text-base">
               {isPiercing
                 ? "Professional Piercing . Ear Curation . Precision Placement . Custom Tattoos"
-                : "Custom Tattoos . Realism . Cover-Ups . Professional Piercing"}
+                : "Looking for a professional tattoo artist in Gurgaon? Khem Tattoo specializes in custom , realism , black & grey, colour, fine-line and cover-up."}
             </p>
             <div className="mt-5 flex items-center gap-2 text-sm text-white/80"><MapPin size={19} className="text-[#ba9255]" /> MGF Metropolis Mall, Sector 28, Gurgaon</div>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
