@@ -6,6 +6,7 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { tattooImages, piercingImages } from "@/data/portfolio";
 import Link from "next/link";
+import { site } from "@/data/site";
 
 // ─── Reusable lazy image with reveal animation ───────────────────────────────
 function PortfolioImage({ src, alt, priority = false, onOpen, index }) {
@@ -239,10 +240,10 @@ export default function Portfolio({ service = "tattoo" }) {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         >
           <Link
-            href="#contact"
+            href={site.instagram}
             className="max-w-full whitespace-nowrap rounded-full border border-[#ba9255] px-4 py-3.5 text-center font-sans text-[9px] uppercase tracking-[0.08em] text-[#ba9255] transition-all duration-300 hover:bg-[#ba9255] hover:text-white sm:px-8 sm:text-[12px] sm:tracking-wide2"
           >
-            Start Your Design Conversation →
+            See the full archive on Instagram  →
           </Link>
         </motion.div>
       </div>
