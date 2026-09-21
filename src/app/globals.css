@@ -77,6 +77,7 @@ select:focus-visible,
 .grain {
   isolation: isolate;
 }
+
 .grain::before {
   content: "";
   position: absolute;
@@ -94,14 +95,12 @@ select:focus-visible,
 }
 
 .texture-dark {
-  background: linear-gradient(
-    135deg,
-    #111111 0%,
-    #242321 35%,
-    #302e2b 52%,
-    #211f1d 72%,
-    #0e0e0e 100%
-  );
+  background: linear-gradient(135deg,
+      #111111 0%,
+      #242321 35%,
+      #302e2b 52%,
+      #211f1d 72%,
+      #0e0e0e 100%);
 }
 
 .hero-ink-field {
@@ -126,24 +125,59 @@ select:focus-visible,
 }
 
 /* Placeholder image texture generator */
-.ph-1 { background: linear-gradient(145deg, #2b2622, #100e0c); }
-.ph-2 { background: linear-gradient(145deg, #3a2a25, #16110e); }
-.ph-3 { background: linear-gradient(145deg, #241f1c, #4a3a2e); }
-.ph-4 { background: linear-gradient(145deg, #332a22, #0c0b0a); }
-.ph-5 { background: linear-gradient(145deg, #2e2420, #5a3c33); }
-.ph-6 { background: linear-gradient(145deg, #4a2027, #1a0d10); }
-.ph-7 { background: linear-gradient(145deg, #26221d, #3d332a); }
-.ph-8 { background: linear-gradient(145deg, #201c19, #4c3a2c); }
+.ph-1 {
+  background: linear-gradient(145deg, #2b2622, #100e0c);
+}
+
+.ph-2 {
+  background: linear-gradient(145deg, #3a2a25, #16110e);
+}
+
+.ph-3 {
+  background: linear-gradient(145deg, #241f1c, #4a3a2e);
+}
+
+.ph-4 {
+  background: linear-gradient(145deg, #332a22, #0c0b0a);
+}
+
+.ph-5 {
+  background: linear-gradient(145deg, #2e2420, #5a3c33);
+}
+
+.ph-6 {
+  background: linear-gradient(145deg, #4a2027, #1a0d10);
+}
+
+.ph-7 {
+  background: linear-gradient(145deg, #26221d, #3d332a);
+}
+
+.ph-8 {
+  background: linear-gradient(145deg, #201c19, #4c3a2c);
+}
 
 /* Hide native scrollbar on review/gallery scroll tracks */
-.no-scrollbar::-webkit-scrollbar { display: none; }
-.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 
 /* Masonry columns fix: ensure items don't split across columns */
-.masonry-grid { column-fill: balance; }
-.masonry-grid > * { break-inside: avoid; }
+.masonry-grid {
+  column-fill: balance;
+}
+
+.masonry-grid>* {
+  break-inside: avoid;
+}
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
