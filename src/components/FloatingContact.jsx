@@ -1,6 +1,6 @@
 "use client";
 
-import { Phone, MessageCircle } from "lucide-react";
+import { Phone, MessageCircle, MapPin } from "lucide-react";
 import { site } from "@/data/site";
 
 export default function FloatingContact() {
@@ -29,6 +29,16 @@ export default function FloatingContact() {
         className="flex h-[52px] w-[52px] items-center justify-center rounded-full border border-bone/20 bg-charcoal text-bone shadow-[0_8px_24px_rgba(0,0,0,0.45)] transition-transform duration-200 hover:scale-110 active:scale-95"
       >
         <Phone size={20} strokeWidth={2} />
+      </a>
+
+      <a
+        href={site.mapsUrl}
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Locate Khem Tattoo on Google Maps"
+        className="flex h-[52px] w-[52px] items-center justify-center rounded-full border border-bone/20 bg-charcoal text-bone shadow-[0_8px_24px_rgba(0,0,0,0.45)] transition-transform duration-200 hover:scale-110 active:scale-95"
+      >
+        <MapPin size={20} strokeWidth={2} />
       </a>
     </div>
   );
